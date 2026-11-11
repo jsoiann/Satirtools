@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-HK"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>自我探索</title>
+<style>:root{--bg:#F2F5F7;--card:#fff;--tx:#1E2A32;--tx2:#566570;--bd:#D5DDE2;--acc:#2F5D7C;--acc-tx:#fff;--line:#8FA0AB;--dg:#A32D2D;--lb:92%;--lbd:48%;--lt:24%}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141B20;--card:#1D262D;--tx:#E8EEF1;--tx2:#9BAAB4;--bd:#33414B;--acc:#8DBBD9;--acc-tx:#0E1A22;--line:#6B7C88;--dg:#F09595;--lb:22%;--lbd:62%;--lt:88%}}:root[data-theme="dark"]{--bg:#141B20;--card:#1D262D;--tx:#E8EEF1;--tx2:#9BAAB4;--bd:#33414B;--acc:#8DBBD9;--acc-tx:#0E1A22;--line:#6B7C88;--dg:#F09595;--lb:22%;--lbd:62%;--lt:88%}:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}*,*::before,*::after{box-sizing:inherit}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.7 "PingFang HK","Noto Sans HK","Microsoft JhengHei",system-ui,sans-serif}:root{--bg:#F2F5F7;--card:#fff;--tx:#1E2A32;--tx2:#566570;--bd:#D5DDE2;--acc:#2F5D7C;--acc-tx:#fff;--line:#A9B8C2;--dg:#A32D2D;
+--g-bg:#E3F1E8;--g-bd:#4E8C66;--g-tx:#1F4D33;--m-bg:#F6EBD3;--m-bd:#B08A2E;--m-tx:#5C4512;--h-bg:#F8E3E6;--h-bd:#BE5568;--h-tx:#6B2230;--p-bg:#E1EAF2;--p-bd:#2F5D7C;--p-tx:#183548}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141B20;--card:#1D262D;--tx:#E8EEF1;--tx2:#9BAAB4;--bd:#33414B;--acc:#8DBBD9;--acc-tx:#0E1A22;--line:#4A5B67;--dg:#F09595;
+--g-bg:#1F4D33;--g-bd:#7FC29A;--g-tx:#CDEBD8;--m-bg:#5C4512;--m-bd:#D9B65A;--m-tx:#F3E3B3;--h-bg:#6B2230;--h-bd:#E58A9B;--h-tx:#F7CDD5;--p-bg:#183548;--p-bd:#8DBBD9;--p-tx:#D4E6F2}}:root[data-theme="dark"]{--bg:#141B20;--card:#1D262D;--tx:#E8EEF1;--tx2:#9BAAB4;--bd:#33414B;--acc:#8DBBD9;--acc-tx:#0E1A22;--line:#4A5B67;--dg:#F09595;
+--g-bg:#1F4D33;--g-bd:#7FC29A;--g-tx:#CDEBD8;--m-bg:#5C4512;--m-bd:#D9B65A;--m-tx:#F3E3B3;--h-bg:#6B2230;--h-bd:#E58A9B;--h-tx:#F7CDD5;--p-bg:#183548;--p-bd:#8DBBD9;--p-tx:#D4E6F2}:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}
+.top{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 16px;background:var(--card);border-bottom:1px solid var(--bd)}
+.top b{margin-right:10px;font-weight:600}
+.top a{color:var(--tx2);text-decoration:none;padding:4px 12px;border-radius:16px;font-size:15px}
+.top a.on{background:var(--acc);color:var(--acc-tx)}
+.page{max-width:1020px;margin:0 auto;padding:20px 16px 40px}
+.ph{font-size:26px;font-weight:600;margin:6px 0 4px}
+.sub{color:var(--tx2);margin:0 0 6px}.sm{font-size:14px;color:var(--tx2)}
+.cards{display:grid;gap:14px;margin:20px 0}
+.hc{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 20px}
+a.hc:hover,a.hc:focus-visible{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc);outline:none}
+.hc h2{font-size:19px;font-weight:600;margin:0 0 4px}.hc p{margin:0 0 6px;color:var(--tx2)}.hc.off{opacity:.6}
+.fc{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin-top:16px}.fc h2{font-size:18px;font-weight:600;margin:0 0 6px}
+.fbs{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.fbtn{font:inherit;font-weight:500;min-height:44px;padding:0 20px;border-radius:8px;border:1px solid var(--acc);background:var(--acc);color:var(--acc-tx);cursor:pointer}.fbtn.o{background:none;color:var(--acc)}
+#v-wheel .wrap{max-width:1020px;margin:0 auto;padding:24px 16px 40px}#v-wheel h1{font-size:26px;font-weight:600;margin:0 0 4px}#v-wheel h2{font-size:18px;font-weight:600;margin:0 0 8px}#v-wheel .sub{color:var(--tx2);margin:0 0 6px}#v-wheel .sm{font-size:14px;color:var(--tx2)}#v-wheel .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:16px}@media(min-width:860px){#v-wheel .grid{grid-template-columns:minmax(0,420px) minmax(0,1fr);align-items:start}}#v-wheel .card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px}#v-wheel label.l{display:block;font-weight:500;margin:14px 0 2px}#v-wheel .hint{font-size:14px;color:var(--tx2);margin:0 0 6px}#v-wheel input[type=text],#v-wheel textarea{width:100%;font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px 10px}#v-wheel textarea{resize:vertical;min-height:64px}#v-wheel input:focus-visible,#v-wheel textarea:focus-visible,#v-wheel button:focus-visible,#v-wheel .seg label:has(input:focus-visible){outline:2px solid var(--acc);outline-offset:2px}#v-wheel .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}#v-wheel .chip,#v-wheel .lk,#v-wheel .tipb{font:inherit;font-size:14px;background:none;color:var(--acc);border:1px solid var(--bd);border-radius:16px;padding:2px 12px;cursor:pointer}#v-wheel .lk{border:0;padding:4px 8px}#v-wheel .lk.dg{color:var(--dg)}#v-wheel .tipb{margin-top:6px}#v-wheel #tip{margin:6px 0 0;font-size:14px;color:var(--tx2);min-height:1.7em}#v-wheel input[type=range]{width:100%;accent-color:var(--acc)}#v-wheel .seg{display:flex;flex-wrap:wrap;gap:8px}#v-wheel .seg label{position:relative;border:1px solid var(--bd);border-radius:8px;padding:6px 12px;cursor:pointer}#v-wheel .seg input{position:absolute;opacity:0;inset:0;cursor:pointer}#v-wheel .seg .good:has(:checked){background:var(--g-bg);border-color:var(--g-bd);color:var(--g-tx)}#v-wheel .seg .mixed:has(:checked){background:var(--m-bg);border-color:var(--m-bd);color:var(--m-tx)}#v-wheel .seg .hard:has(:checked){background:var(--h-bg);border-color:var(--h-bd);color:var(--h-tx)}#v-wheel .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:480px){#v-wheel .two{grid-template-columns:1fr}}#v-wheel .btns{display:flex;gap:10px;margin-top:16px;align-items:center}#v-wheel .btn{font:inherit;font-weight:500;min-height:44px;padding:0 20px;border-radius:8px;border:1px solid var(--acc);background:var(--acc);color:var(--acc-tx);cursor:pointer}#v-wheel .btn.o{background:none;color:var(--acc)}#v-wheel #err{color:var(--dg);font-size:14px;margin:6px 0 0;min-height:1.4em}#v-wheel .wheelcard{position:sticky;top:8px}@media(max-width:859px){#v-wheel .wheelcard{position:static}}#v-wheel svg{display:block;width:100%;height:auto}#v-wheel .ring{fill:none;stroke:var(--bd);stroke-dasharray:3 5}#v-wheel .nd{cursor:pointer;outline:none}#v-wheel .nd.me{cursor:default}#v-wheel .nd text{text-anchor:middle;dominant-baseline:central;font-size:15px;font-weight:500}#v-wheel .nd rect,#v-wheel .nd circle{stroke-width:1.2}#v-wheel .nd.me circle{fill:var(--p-bg);stroke:var(--p-bd)}#v-wheel .nd.me text{fill:var(--p-tx);font-size:18px}#v-wheel .nd.good rect{fill:var(--g-bg);stroke:var(--g-bd)}#v-wheel .nd.good text{fill:var(--g-tx)}#v-wheel .nd.mixed rect{fill:var(--m-bg);stroke:var(--m-bd)}#v-wheel .nd.mixed text{fill:var(--m-tx)}#v-wheel .nd.hard rect{fill:var(--h-bg);stroke:var(--h-bd)}#v-wheel .nd.hard text{fill:var(--h-tx)}#v-wheel .nd:focus-visible rect,#v-wheel .nd:hover rect{stroke-width:3}#v-wheel .ts{font-size:14px;fill:var(--tx2);text-anchor:middle}#v-wheel .legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;color:var(--tx2);margin-top:8px}#v-wheel .dot{display:inline-block;width:12px;height:12px;border-radius:6px;margin-right:5px;vertical-align:-1px;border:1px solid}#v-wheel .dot.good{background:var(--g-bg);border-color:var(--g-bd)}#v-wheel .dot.mixed{background:var(--m-bg);border-color:var(--m-bd)}#v-wheel .dot.hard{background:var(--h-bg);border-color:var(--h-bd)}#v-wheel .row{display:flex;justify-content:space-between;gap:8px;padding:10px 0;border-top:1px solid var(--bd)}#v-wheel .row:first-child{border-top:0}#v-wheel .acts{white-space:nowrap}#v-wheel .tag{font-size:13px;margin-left:8px;padding:0 8px;border-radius:10px;border:1px solid}#v-wheel .tag.good{background:var(--g-bg);border-color:var(--g-bd);color:var(--g-tx)}#v-wheel .tag.mixed{background:var(--m-bg);border-color:var(--m-bd);color:var(--m-tx)}#v-wheel .tag.hard{background:var(--h-bg);border-color:var(--h-bd);color:var(--h-tx)}#v-wheel ul{margin:4px 0 0;padding-left:20px}#v-wheel .foot{margin-top:20px;font-size:14px;color:var(--tx2)}@media(prefers-reduced-motion:reduce){}#v-loss .wrap{max-width:1020px;margin:0 auto;padding:20px 16px 40px}#v-loss h1{font-size:26px;font-weight:600;margin:6px 0 4px}#v-loss h2{font-size:18px;font-weight:600;margin:0 0 6px}#v-loss h3{font-size:16px;font-weight:600;margin:20px 0 0;color:var(--acc)}#v-loss a{color:var(--acc)}#v-loss .sub{color:var(--tx2);margin:0 0 6px}#v-loss .sm{font-size:14px;color:var(--tx2)}#v-loss .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:16px}@media(min-width:860px){#v-loss .grid{grid-template-columns:minmax(0,300px) minmax(0,1fr);align-items:start}}#v-loss .card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin-top:16px}#v-loss .grid .card{margin-top:0}#v-loss label.l{display:block;font-weight:500;margin:14px 0 2px}#v-loss .hint{font-size:14px;color:var(--tx2);margin:0 0 6px}#v-loss input[type=text],#v-loss input[type=number],#v-loss textarea,#v-loss select{width:100%;font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px 10px}#v-loss textarea{resize:vertical;min-height:72px}#v-loss input:focus-visible,#v-loss textarea:focus-visible,#v-loss select:focus-visible,#v-loss button:focus-visible,#v-loss .seg label:has(input:focus-visible){outline:2px solid var(--acc);outline-offset:2px}#v-loss .seg{display:flex;flex-wrap:wrap;gap:8px}#v-loss .seg label{position:relative;border:1px solid var(--bd);border-radius:8px;padding:4px 12px;cursor:pointer;font-size:15px}#v-loss .seg label::before{content:"";display:inline-block;width:10px;height:10px;border-radius:5px;margin-right:6px;background:hsl(var(--h) var(--s) var(--lbd))}#v-loss .seg input{position:absolute;opacity:0;inset:0;cursor:pointer}#v-loss .seg label:has(:checked){background:hsl(var(--h) var(--s) var(--lb));border-color:hsl(var(--h) var(--s) var(--lbd));color:hsl(var(--h) var(--s) var(--lt))}#v-loss .btns{display:flex;gap:10px;margin-top:14px;align-items:center;flex-wrap:wrap}#v-loss .btn{font:inherit;font-weight:500;min-height:44px;padding:0 18px;border-radius:8px;border:1px solid var(--acc);background:var(--acc);color:var(--acc-tx);cursor:pointer}#v-loss .btn.o{background:none;color:var(--acc)}#v-loss .lk{font:inherit;font-size:14px;background:none;border:0;color:var(--acc);padding:4px 8px;cursor:pointer}#v-loss .lk.dg{color:var(--dg)}#v-loss .err{color:var(--dg);font-size:14px;margin:6px 0 0;min-height:1.4em}#v-loss .paper{overflow-x:auto;border:1px dashed var(--bd);border-radius:8px;background:var(--bg)}#v-loss svg{display:block;width:100%;height:auto}#v-loss .ev{cursor:pointer;outline:none}#v-loss .ev rect{fill:hsl(var(--h) var(--s) var(--lb));stroke:hsl(var(--h) var(--s) var(--lbd));stroke-width:1.2}#v-loss .ev text{fill:hsl(var(--h) var(--s) var(--lt));font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central}#v-loss .ev circle{fill:hsl(var(--h) var(--s) var(--lbd))}#v-loss .ev:hover rect,#v-loss .ev:focus-visible rect{stroke-width:3}#v-loss .tk{font-size:12px;fill:var(--tx2);text-anchor:middle}#v-loss .row{display:flex;justify-content:space-between;gap:8px;padding:10px 0;border-top:1px solid var(--bd)}#v-loss .row:first-child{border-top:0}#v-loss .tag{font-size:13px;margin-left:8px;padding:0 8px;border-radius:10px;border:1px solid hsl(var(--h) var(--s) var(--lbd));background:hsl(var(--h) var(--s) var(--lb));color:hsl(var(--h) var(--s) var(--lt))}#v-loss .legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:14px;color:var(--tx2);margin-top:8px}#v-loss .dot{display:inline-block;width:11px;height:11px;border-radius:6px;margin-right:5px;vertical-align:-1px;background:hsl(var(--h) var(--s) var(--lbd))}#v-loss .care{border-left:3px solid var(--acc);padding:4px 12px;color:var(--tx2);font-size:14px;margin:10px 0}#v-loss .foot{margin-top:20px;font-size:14px;color:var(--tx2)}#v-loss .chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}#v-loss .chip{font:inherit;font-size:15px;background:none;color:var(--tx);border:1px solid var(--bd);border-radius:18px;padding:4px 14px;min-height:36px;cursor:pointer}#v-loss .chip.on{background:var(--acc);border-color:var(--acc);color:var(--acc-tx)}#v-loss .steps{display:flex;gap:6px;margin:12px 0 4px}#v-loss .steps i{flex:1;height:4px;border-radius:2px;background:var(--bd)}#v-loss .steps i.on{background:var(--acc)}</style></head><body>
+<div class="top"><b>自我探索</b><a href="#home">首頁</a><a href="#wheel">影響輪</a><a href="#loss">喪失年表</a><a href="#finish">完成輸出</a></div>
+<div class="page">
+<section id="v-home" class="view" hidden>
+<h1 class="ph">自我探索</h1>
+<p class="sub">一張屬於你嘅探索紙。想做邊部分就揀邊部分，唔使一次做晒。</p>
+<p class="sm">內容會自動儲存喺呢部機嘅瀏覽器。今次入唔晒，下次打開仍然係同一張，直到你自己清除。唔會上傳，唔使註冊。</p>
+<div class="cards">
+<a class="hc" href="#wheel"><h2>影響輪</h2><p>將影響過你嘅人放喺「我」嘅周圍，睇吓邊啲想繼續帶住，邊啲想放低。</p><span class="sm" id="c-wheel"></span></a>
+<a class="hc" href="#loss"><h2>喪失年表</h2><p>喺一條由出生到而家嘅線上標出重要嘅喪失，再一層一層慢慢回望。會觸動較多情緒，建議喺安靜、有時間嘅時候做。</p><span class="sm" id="c-loss"></span></a>
+<a class="hc" href="#finish"><h2>完成同輸出</h2><p>隨時都可以將目前嘅內容輸出成 JPG 或 PDF。</p></a>
+<div class="hc off"><h2>原生家庭圖、生活列表</h2><p>籌備中。</p></div>
+</div></section>
+<section id="v-wheel" class="view" hidden>
+<h1>影響輪</h1>
+<p class="sub">一個人由細到大，受過好多人影響。呢度幫你將佢哋放喺「我」嘅周圍，睇清楚邊啲想繼續帶住，邊啲想放低。</p>
+<p class="sm">資料只存喺呢部機嘅瀏覽器，唔會上傳。建議用稱謂（例如「爸爸」「李老師」）而唔係全名。<span id="nosave" hidden> 目前呢個環境未能儲存，重新整理後內容會清空。</span></p>
+<div class="grid">
+<div class="card" id="formcard">
+<h2 id="ft">加入一個對你有影響嘅人</h2>
+<label class="l" for="f-name">1. 佢係你嘅…？</label>
+<p class="hint">用稱謂就得，家人或者家人以外都可以。</p>
+<input type="text" id="f-name" maxlength="8" autocomplete="off" placeholder="例：媽媽、李老師">
+<div class="chips" id="chips"></div>
+<label class="l" for="f-taught">2. 佢教咗我啲咩？</label>
+<p class="hint">做人道理、做事方式、點睇世界，唔使完整，想到咩寫咩。</p>
+<textarea id="f-taught" placeholder="例：要勤力、唔好麻煩人、有事自己頂住"></textarea>
+<button type="button" class="tipb" id="tipb">諗唔到？俾我一個提示</button>
+<p id="tip" aria-live="polite"></p>
+<label class="l" for="f-s">3. 佢對我嘅影響有幾大？<span id="sval" class="sm"></span></label>
+<p class="hint">越大，佢喺圖入面就越貼近「我」。</p>
+<input type="range" id="f-s" min="1" max="5" value="3">
+<label class="l">4. 呢份影響，帶畀我嘅感覺係…</label>
+<div class="seg" role="radiogroup">
+<label class="good"><input type="radio" name="feel" value="good">支持到我</label>
+<label class="mixed"><input type="radio" name="feel" value="mixed" checked>兩樣都有</label>
+<label class="hard"><input type="radio" name="feel" value="hard">壓力較多</label></div>
+<label class="l" for="f-carry">5. 而家我仲帶住啲咩？</label>
+<p class="hint">例如某啲習慣、諗法，或者對自己嘅要求。</p>
+<textarea id="f-carry" placeholder="例：做錯嘢會好快怪自己"></textarea>
+<label class="l">6. 我想點處理？</label>
+<p class="hint">唔使急，之後隨時可以返嚟改。</p>
+<div class="two">
+<div><span class="sm">想保留</span><textarea id="f-keep" aria-label="想保留" placeholder="例：做事認真"></textarea></div>
+<div><span class="sm">想放低</span><textarea id="f-drop" aria-label="想放低" placeholder="例：事事要完美"></textarea></div></div>
+<p id="err" role="alert"></p>
+<div class="btns"><button type="button" class="btn" id="go">加入影響輪</button><button type="button" class="btn o" id="cancel" hidden>取消修改</button></div>
+</div>
+<div>
+<div class="card wheelcard" id="wheelcard">
+<h2>我嘅影響輪</h2>
+<svg id="wheel" viewBox="0 0 480 400" role="img" aria-label="影響輪圖"></svg>
+<div class="legend"><span><i class="dot good"></i>支持到我</span><span><i class="dot mixed"></i>兩樣都有</span><span><i class="dot hard"></i>壓力較多</span><span>越近＝影響越大，撳人名可以修改</span></div>
+</div>
+<div class="card" style="margin-top:16px" id="listcard" hidden><h2>已加入嘅人</h2><div id="plist"></div></div>
+<div class="card" style="margin-top:16px" id="reflect" hidden>
+<h2>回望</h2>
+<p class="hint">望一望個輪，問吓自己：邊啲影響，係我而家都想繼續帶住？</p>
+<div class="two"><div><b>想保留</b><ul id="keep"></ul></div><div><b>想放低</b><ul id="drop"></ul></div></div></div>
+<div class="card" style="margin-top:16px"><h2>備份同還原</h2><p class="hint">資料淨係存喺呢部機嘅瀏覽器。想換機、或者怕被清走，可以產生備份碼，複製後貼去自己嘅記事簿或者傳畀自己；之後貼返入嚟就可以還原。備份碼包含你寫嘅內容，請放喺私人嘅地方。</p><div class="btns" style="margin-top:0"><button type="button" class="btn o" id="bk">產生備份碼</button><button type="button" class="btn o" id="rs">用備份碼還原</button></div><textarea id="bkbox" style="margin-top:10px" hidden aria-label="備份碼" spellcheck="false"></textarea><p id="bkmsg" class="sm" aria-live="polite"></p></div>
+<p class="sm" style="margin-top:12px"><button type="button" class="lk dg" id="clear" hidden>清除全部資料</button></p>
+</div></div>
+<p class="foot">呢個係自我探索工具，唔係輔導或治療。如果寫嘅時候諗起令你好難受嘅事，可以搵信任嘅人或者專業人士傾吓。</p>
+</section>
+<section id="v-loss" class="view" hidden>
+<h1>喪失年表</h1>
+<p class="sub">將人生中重要嘅喪失，標喺一條由出生去到而家嘅線上。畫完之後，再慢慢回望：呢啲喪失對你有咩意義，同埋你而家想點樣行落去。</p>
+<p class="sm">資料只存喺呢部機嘅瀏覽器，唔會上傳。只需要出生年份，唔使填全名；用「婆婆」「舊同事」呢類稱呼就夠。<span id="nosave" hidden> 目前呢個環境未能儲存，重新整理後內容會清空。</span></p>
+<div class="care">呢啲題目可能會觸動情緒。可以隨時停低，過幾日再返嚟；唔想答嘅題目可以跳過。</div>
+<div class="grid">
+<div class="card"><h2>① 起點</h2>
+<label class="l" for="birth">出生年份</label>
+<input type="number" id="birth" inputmode="numeric" placeholder="例：1985">
+<p class="hint">終點係「而家」（<span id="nowy"></span>）。</p>
+<div class="btns" style="margin-top:8px"><button type="button" class="btn o" id="setb">設定起點</button></div>
+<p class="err" id="e1" role="alert"></p></div>
+<div class="card"><h2 id="ft">② 標出一個喪失</h2>
+<p class="hint">想到咩就標咩：親人、重要嘅人、健康、工作、感情、寵物，或者其他。</p>
+<div class="seg" id="mode" role="radiogroup" aria-label="輸入方式" style="margin-bottom:8px;--h:210;--s:8%"><label><input type="radio" name="mode" value="y" checked>用年份</label><label><input type="radio" name="mode" value="a">用當時歲數</label></div>
+<div style="display:grid;grid-template-columns:110px 1fr;gap:10px">
+<div><label class="l" id="f-yl" for="f-y" style="margin-top:0">年份</label><input type="number" id="f-y" inputmode="numeric" placeholder="例：2013"></div>
+<div><label class="l" for="f-t" style="margin-top:0">簡短標題（選填）</label><input type="text" id="f-t" maxlength="14" autocomplete="off" placeholder="例：婆婆離世（留空就用類別名）"></div></div>
+<label class="l">屬於邊一類？</label>
+<div class="seg" id="cats" role="radiogroup"></div>
+<div id="owrap" hidden><label class="l" for="f-o">呢個係咩類型？（必填）</label><p class="hint">例如失戀、失去自己。你寫嘅會標喺年表上。</p><input type="text" id="f-o" maxlength="8" autocomplete="off"><div class="chips" id="ochips"></div></div>
+<label class="l" for="f-n">想補充幾句？（選填）</label>
+<textarea id="f-n" placeholder="當時發生咩事，或者你記得嘅一個畫面"></textarea>
+<p class="err" id="e2" role="alert"></p>
+<div class="btns" style="margin-top:6px"><button type="button" class="btn" id="go">標出喪失</button><button type="button" class="btn o" id="cancel" hidden>取消修改</button></div></div>
+</div>
+<div class="card"><h2>我嘅喪失年表</h2>
+<div class="paper" id="paper"></div>
+<div class="legend" id="legend"></div>
+<p class="sm" style="margin-top:8px">由左至右係由出生去到而家，撳標籤可以修改。同一段時間事情多，標籤會自動分上下層排開。</p></div>
+<div class="card" id="listcard" hidden><h2>已標出嘅喪失</h2><div id="plist"></div></div>
+<div class="card" id="refl"><h2>③ 說說呢張圖</h2>
+<p class="hint">一層一層慢慢嚟，全部都係選填，可以直接撳「下一層」，亦可以隨時停低。可以針對整張年表，亦可以揀其中一個喪失嚟答。</p>
+<label class="l" for="tgt" style="margin-top:6px">而家想答關於…</label>
+<select id="tgt"></select>
+<div id="qs"></div></div>
+<div class="card"><h2>備份同還原</h2>
+<p class="hint">資料淨係存喺呢部機。想換機或者怕被清走，可以產生備份碼，複製後貼去自己嘅記事簿；之後貼返入嚟就可以還原（會取代而家嘅內容）。備份碼包含你寫嘅內容，請放喺私人嘅地方。</p>
+<div class="btns" style="margin-top:0"><button type="button" class="btn o" id="bk">產生備份碼</button><button type="button" class="btn o" id="rs">用備份碼還原</button><button type="button" class="lk dg" id="clear">清除全部資料</button></div>
+<textarea id="bkbox" style="margin-top:10px" hidden aria-label="備份碼" spellcheck="false"></textarea>
+<p id="bkmsg" class="sm" aria-live="polite"></p></div>
+<p class="foot">呢個係自我探索工具，唔係輔導或治療。如果寫嘅時候感到好難受，請搵信任嘅人或者專業人士陪你一齊傾。</p>
+</section>
+<section id="v-finish" class="view" hidden>
+<h1 class="ph">完成同輸出</h1>
+<p class="sub">未做晒都可以先輸出，之後仍然可以返去繼續改，內容唔會被清走。</p>
+<div class="fc"><p class="sm" id="fsum"></p><div class="fbs"><button type="button" class="fbtn" id="x-jpg">輸出 JPG</button><button type="button" class="fbtn o" id="x-pdf">輸出 PDF</button></div><p class="sm" id="xmsg" aria-live="polite"></p></div>
+<div class="fc"><h2>清除全部</h2><p class="sm">只會清除呢部機上嘅內容。建議先輸出，或者用各部分底部嘅備份碼保存。</p><div class="fbs"><button type="button" class="fbtn o" id="x-clr">清除全部並重新開始</button></div></div>
+</section>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>(function(){
+const R=document.getElementById('v-wheel'),$=id=>R.querySelector('#'+id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const FEEL={good:'支持到我',mixed:'兩樣都有',hard:'壓力較多'};
+const LV=['好細','有啲','中等','頗大','好大'];
+const ROLES=['爸爸','媽媽','嫲嫲','爺爺','婆婆','公公','兄弟姊妹','老師','朋友','伴侶','上司'];
+const TIPS=['佢成日掛喺口邊嘅一句說話係咩？','佢遇到困難或者嬲嗰陣，通常會點做？','細個嗰時，點樣會被佢讚，點樣會被佢鬧？','佢令你覺得咩係「應該」做，咩係「唔應該」做？','有冇一件小事，你到而家仍然記得？','佢點樣表達感受，定係習慣收埋？','如果佢而家望住你，你估佢會同你講咩？'];
+const KEY='satir-wheel-v1';
+let people=[],editing=null,tipI=-1;
+try{const d=JSON.parse(localStorage.getItem(KEY)||'[]');if(Array.isArray(d))people=d}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(people))}catch(e){$('nosave').hidden=false}}
+function arm(b,t,fn){if(b.dataset.armed){fn();return}const o=b.textContent;b.dataset.armed=1;b.textContent=t;setTimeout(()=>{delete b.dataset.armed;b.textContent=o},3000)}
+function sv(){$('sval').textContent='（'+LV[$('f-s').value-1]+'）'}
+function fill(p){$('f-name').value=p?p.name:'';$('f-taught').value=p?p.taught:'';$('f-s').value=p?p.s:3;$('f-carry').value=p?p.carry:'';$('f-keep').value=p?p.keep:'';$('f-drop').value=p?p.drop:'';document.querySelector('input[name=feel][value='+(p?p.feel:'mixed')+']').checked=true;$('go').textContent=p?'更新':'加入影響輪';$('cancel').hidden=!p;$('ft').textContent=p?'修改「'+p.name+'」':'加入一個對你有影響嘅人';$('err').textContent='';sv()}
+function draw(){
+const n=people.length,cx=240,cy=200;
+let h='<circle cx="240" cy="200" r="155" class="ring"/><circle cx="240" cy="200" r="85" class="ring"/>';
+const pos=people.map((p,i)=>{const a=2*Math.PI*i/n-Math.PI/2,r=155-(p.s-1)*17.5;return[cx+r*Math.cos(a),cy+r*Math.sin(a)]});
+pos.forEach((q,i)=>{h+='<line x1="240" y1="200" x2="'+q[0].toFixed(1)+'" y2="'+q[1].toFixed(1)+'" stroke="var(--line)" stroke-width="'+(people[i].s*1.3)+'" stroke-linecap="round"/>'});
+h+='<g class="nd me"><circle cx="240" cy="200" r="34"/><text x="240" y="200">我</text></g>';
+people.forEach((p,i)=>{const w=Math.max(64,[...p.name].length*16+26),x=pos[i][0],y=pos[i][1];h+='<g class="nd '+p.feel+'" tabindex="0" role="button" data-id="'+p.id+'" aria-label="修改'+esc(p.name)+'"><rect x="'+(x-w/2).toFixed(1)+'" y="'+(y-17).toFixed(1)+'" width="'+w+'" height="34" rx="17"/><text x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'">'+esc(p.name)+'</text></g>'});
+if(!n)h+='<text class="ts" x="240" y="350">由加入第一個人開始</text>';
+$('wheel').innerHTML=h}
+function lists(){
+const L=$('plist');L.innerHTML='';
+people.forEach(p=>{const d=document.createElement('div');d.className='row';d.innerHTML='<div><b>'+esc(p.name)+'</b><span class="tag '+p.feel+'">'+FEEL[p.feel]+'</span>'+(p.taught?'<div class="sm">教咗我：'+esc(p.taught)+'</div>':'')+(p.carry?'<div class="sm">我帶住：'+esc(p.carry)+'</div>':'')+'</div><div class="acts"><button type="button" class="lk" data-e="'+p.id+'">修改</button><button type="button" class="lk dg" data-d="'+p.id+'">刪除</button></div>';L.appendChild(d)});
+$('listcard').hidden=!people.length;$('clear').hidden=!people.length;
+const k=people.filter(p=>p.keep),r=people.filter(p=>p.drop);
+$('reflect').hidden=!(k.length||r.length);
+const li=(a,f)=>a.map(p=>'<li><b>'+esc(p.name)+'</b>：'+esc(p[f])+'</li>').join('')||'<li class="sm">未填</li>';
+$('keep').innerHTML=li(k,'keep');$('drop').innerHTML=li(r,'drop')}
+function render(){draw();lists()}
+function edit(id){const p=people.find(x=>x.id===id);if(!p)return;editing=id;fill(p);$('formcard').scrollIntoView({behavior:'smooth',block:'start'});$('f-name').focus()}
+function submit(){
+const name=$('f-name').value.trim();
+if(!name){$('err').textContent='請先填一個稱謂，例如「媽媽」。';$('f-name').focus();return}
+const o={name,taught:$('f-taught').value.trim(),s:+$('f-s').value,feel:document.querySelector('input[name=feel]:checked').value,carry:$('f-carry').value.trim(),keep:$('f-keep').value.trim(),drop:$('f-drop').value.trim()};
+if(editing){people=people.map(p=>p.id===editing?Object.assign({id:editing},o):p)}else{o.id=Date.now().toString(36)+Math.random().toString(36).slice(2,6);people.push(o)}
+editing=null;save();fill(null);render();
+if(innerWidth<860)$('wheelcard').scrollIntoView({behavior:'smooth',block:'start'})}
+$('chips').innerHTML=ROLES.map(r=>'<button type="button" class="chip">'+r+'</button>').join('');
+$('chips').onclick=e=>{const c=e.target.closest('.chip');if(c){$('f-name').value=c.textContent;$('err').textContent='';$('f-taught').focus()}};
+$('tipb').onclick=()=>{tipI=(tipI+1)%TIPS.length;$('tip').textContent=TIPS[tipI]};
+$('f-s').oninput=sv;$('go').onclick=submit;
+$('f-name').onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();$('f-taught').focus()}};
+$('cancel').onclick=()=>{editing=null;fill(null)};
+$('wheel').onclick=e=>{const g=e.target.closest('.nd[data-id]');if(g)edit(g.dataset.id)};
+$('wheel').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){const g=e.target.closest('.nd[data-id]');if(g){e.preventDefault();edit(g.dataset.id)}}};
+$('plist').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.e)edit(b.dataset.e);else if(b.dataset.d)arm(b,'確定刪除？',()=>{people=people.filter(p=>p.id!==b.dataset.d);if(editing===b.dataset.d){editing=null;fill(null)}save();render()})};
+$('clear').onclick=e=>arm(e.target,'確定清除？',()=>{people=[];editing=null;save();fill(null);render()});
+const bk=$('bkbox'),bm=$('bkmsg');
+$('bk').onclick=()=>{bk.hidden=false;bk.value='SATIR1:'+btoa(unescape(encodeURIComponent(JSON.stringify(people))));bk.focus();bk.select();try{navigator.clipboard.writeText(bk.value).catch(()=>{})}catch(e){}bm.textContent='備份碼已產生，請全選複製，貼去自己嘅記事簿或者傳畀自己。'};
+$('rs').onclick=()=>{const v=bk.value.trim();if(bk.hidden||!v.startsWith('SATIR1:')){bk.hidden=false;bk.value='';bk.focus();bm.textContent='請將備份碼貼喺上面，再撳一次「用備份碼還原」。';return}
+try{const d=JSON.parse(decodeURIComponent(escape(atob(v.slice(7)))));if(!Array.isArray(d))throw 0;let c=0;d.forEach(o=>{if(!o||!o.id||!o.name)return;const n={id:String(o.id).replace(/[^a-z0-9]/gi,'').slice(0,20),name:String(o.name).slice(0,8),taught:String(o.taught||''),s:Math.min(5,Math.max(1,+o.s||3)),feel:FEEL[o.feel]?o.feel:'mixed',carry:String(o.carry||''),keep:String(o.keep||''),drop:String(o.drop||'')};if(!n.id)return;const i=people.findIndex(p=>p.id===n.id);if(i>=0)people[i]=n;else people.push(n);c++});save();render();bm.textContent='已還原 '+c+' 個人。'}catch(e){bm.textContent='呢個備份碼讀唔到，請確認有冇複製漏咗。'}};
+fill(null);render();
+window.SW={get:()=>people,FEEL};
+})();
+(function(){
+const R=document.getElementById('v-loss'),$=id=>R.querySelector('#'+id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const NOW=new Date().getFullYear();
+const CAT=[['親人',350,55],['其他重要的人',275,45],['健康',150,40],['工作',210,50],['情感',28,65],['寵物',48,60],['其他',210,8]];
+const cs=i=>'--h:'+CAT[i][1]+';--s:'+CAT[i][2]+'%';
+const OPT={coping:['照常生活','不停做嘢','收埋唔講','搵人傾','怪責自己','怪責別人','迴避','講道理、分析','靠信仰或祈禱','哭出嚟'],feel:['傷心','恐懼','生氣','內疚','羞愧','孤單','無助','麻木','焦慮','思念','鬆一口氣','不甘心'],ff:['覺得唔應該咁','嬲自己','羞於見人','驚俾人知','覺得軟弱','可以接受','感到平靜','說不清']};
+const OTHERS=['失戀','失去自己','夢想','安全感','信念','身份'];
+const ST=[
+{t:'行為同應對',c:'coping',d:'先由最睇得見嘅開始：喪失發生之後，你做咗啲咩？點樣撐過嚟？用自己嘅字寫低就得。',x:[['t0','用自己嘅字寫低（選填）']]},
+{t:'感受',c:'feel',d:'喺呢啲喪失入面，你有啲咩感受？慢慢諗，唔使急。',x:[['t1','身體邊度有咩感覺？胸口、喉嚨、肚…有冇啲感覺係收埋咗？（選填）']]},
+{t:'感受嘅感受',c:'ff',d:'對於上面嗰啲感受，你自己又有咩感覺？',x:[['t2','用自己嘅字寫低（選填）']]},
+{t:'觀點同信念',d:'想再深入先做，唔想答就直接撳「下一層」。',x:[['v1','這些喪失，對你的意義或價值是什麼？'],['v2','在這些喪失中，你怎樣看自己？它們怎樣改變了你的重要關係？'],['v3','也許你沒有意識到，你在當時做出了怎樣的決定？']]},
+{t:'期待、渴望同生命力',d:'最後一層，同樣全部選填。',x:[['d1','是什麼阻礙了你從喪失中有所收獲？'],['d2','你還在等待什麼，或者想抓住什麼？你想滿足自己怎樣的渴望？'],['d3','你現在對自己有什麼期待？'],['d4','你如何和生命力連結，活出自我？']]}];
+const CL=[['c1','做完呢張圖，我有咩新嘅覺察？'],['c2','我想為自己做出咩新嘅決定？']];
+const TK=['t0','t1','t2','v1','v2','v3','d1','d2','d3','d4','c1','c2'];
+const KEY='satir-loss-v1';
+let S={birth:null,ev:[],ans:{}},editing=null,cur='all';
+try{const d=JSON.parse(localStorage.getItem(KEY)||'null');if(d&&typeof d==='object')S=Object.assign(S,d)}catch(e){}
+if(!Array.isArray(S.ev))S.ev=[];if(!S.ans||typeof S.ans!=='object')S.ans={};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){$('nosave').hidden=false}}
+function arm(b,t,fn){if(b.dataset.armed){fn();return}const o=b.textContent;b.dataset.armed=1;b.textContent=t;setTimeout(()=>{delete b.dataset.armed;b.textContent=o},3500)}
+$('nowy').textContent=NOW;
+$('cats').innerHTML=CAT.map((c,i)=>'<label style="'+cs(i)+'"><input type="radio" name="cat" value="'+i+'"'+(i?'':' checked')+'>'+c[0]+'</label>').join('');
+$('legend').innerHTML=CAT.map((c,i)=>'<span style="'+cs(i)+'"><i class="dot"></i>'+c[0]+'</span>').join('');
+let st=Math.min(5,Math.max(0,+((S.ui||{}).st)||0)),chipsOn={},nudge=0;
+const fld=(q,A)=>'<label class="l" for="q_'+q[0]+'">'+q[1]+'</label><textarea id="q_'+q[0]+'" data-k="'+q[0]+'">'+esc(A[q[0]]||'')+'</textarea>';
+const GB=(n,t,o)=>'<button type="button" class="btn'+(o?' o':'')+'" data-go="'+n+'">'+t+'</button>';
+const PICK=['對當年嘅自己講一句話','同一個信任嘅人分享其中一句','做一件令自己同生命力連結嘅小事','唔使行動，只帶走一個覺察'];
+const UNEASY=['覺得唔應該咁','嬲自己','羞於見人','驚俾人知','覺得軟弱'];
+const chip=(c,o,on)=>'<button type="button" class="chip'+(on?' on':'')+'" aria-pressed="'+on+'" data-c="'+c+'" data-o="'+esc(o)+'">'+o+'</button>';
+function fb(A){
+const see=[],ask=[],t=(k,n)=>{const v=(A[k]||'').trim();return v.length>n?v.slice(0,n)+'…':v},j=a=>'「'+a.join('、')+'」',c=A.coping||[],ff=A.ff||[];
+if(S.ev.length){const ys=S.ev.map(e=>e.y);see.push('你標出咗 '+S.ev.length+' 個喪失，由 '+Math.min(...ys)+' 年到 '+Math.max(...ys)+' 年。')}
+if(c.length)see.push('喪失之後，你用'+j(c)+'嚟撐過嚟。呢啲可能都係你當時保護自己嘅方法。');
+if(t('t0',60))see.push('你寫過：「'+t('t0',60)+'」');
+if((A.feel||[]).length)see.push('你提到嘅感受有'+j(A.feel)+'。');
+if(t('t1',60))see.push('你形容身體或者感覺係：「'+t('t1',60)+'」');
+if(ff.length)see.push('而對於呢啲感受，你自己嘅感覺係'+j(ff)+'。');
+if(t('v3',60))see.push('你察覺到當時可能做過一個決定：「'+t('v3',60)+'」');
+if(t('d2',60))see.push('你仲喺度等或者想抓住嘅，係「'+t('d2',60)+'」');
+if(UNEASY.some(x=>ff.includes(x)))ask.push('如果你最好嘅朋友有同樣嘅感受，你會點同佢講？');
+if(['收埋唔講','不停做嘢','迴避'].some(x=>c.includes(x)))ask.push('呢個應對方法，當時幫咗你咩？而家仲需要佢嗎？');
+if(t('v3',1))ask.push('當時嗰個決定，而家仲啱用嗎？');
+if(t('d2',1))ask.push('你仲喺度等嘅，係一個人、一個答案，定係一個感覺？');
+ask.push('如果可以對當年嘅自己講一句話，會係咩？');
+return{see,ask:ask.slice(0,2)}}
+function renderSt(){
+const A=S.ans[cur]||{};
+let h='<div class="steps">'+[0,1,2,3,4,5].map(i=>'<i class="'+(i<=st?'on':'')+'"></i>').join('')+'</div>';
+clearTimeout(nudge);
+if(st>4){const f=fb(A),li=a=>a.map(x=>'<li>'+esc(x)+'</li>').join('');
+h+='<h3>收尾</h3><p class="hint">多謝你願意停低嚟望吓。唔使一次做晒，隨時可以返嚟加。</p>'+CL.map(q=>fld(q,A)).join('')
++'<h3>我見到</h3><p class="hint">以下只係由你寫過嘅字砌返出嚟，唔係結論，只有你自己最清楚。</p><ul>'+(f.see.length?li(f.see):'<li class="sm">未有足夠內容，返去前面寫多啲，回饋會更貼近你。</li>')+'</ul>'
++'<h3>想帶走嘅問題</h3><ul>'+li(f.ask)+'</ul>'
++'<h3>我想揀一樣帶走（可以唔揀）</h3><div class="chips">'+PICK.map(o=>chip('pick',o,A.pick===o)).join('')+'</div><div class="btns">'+GB(0,'返去第一層',1)+'</div>'}
+else{const x=ST[st],k0=x.x[0][0],tx=(A[k0]||'').trim(),sel=x.c?(A[x.c]||[]):[],shown=!x.c||chipsOn[st]||tx||sel.length;
+h+='<h3>第 '+(st+1)+' 層・'+x.t+'</h3><p class="hint">'+x.d+'</p>'+x.x.map(q=>fld(q,A)).join('');
+if(x.c)h+=shown?'<p class="hint" style="margin-top:12px">'+(tx?'有冇其他想加？':'諗唔到？睇吓有冇啱嘅字：')+'</p><div class="chips">'+OPT[x.c].map(o=>chip(x.c,o,sel.includes(o))).join('')+'</div>':'<div class="btns" style="margin-top:8px"><button type="button" class="chip" data-show="1">諗唔到？睇吓有咩字</button></div>';
+h+='<div class="btns">'+(st?GB(st-1,'上一層',1):'')+(st===2?GB(3,'想再深入',0)+GB(5,'先到收尾',1):st===4?GB(5,'到收尾',0):GB(st+1,'下一層',0))+'</div>';
+if(x.c&&!shown)nudge=setTimeout(()=>{const b=$('qs').querySelector('[data-show]');if(b)b.textContent='唔急。想要啲提示嘅話，撳呢度睇吓有咩字'},90000)}
+$('qs').innerHTML=h}
+$('qs').onclick=e=>{const g=e.target.closest('[data-go]');if(g){st=+g.dataset.go;S.ui={st};save();renderSt();$('refl').scrollIntoView({behavior:'smooth',block:'start'});return}
+const sh=e.target.closest('[data-show]');if(sh){chipsOn[st]=1;renderSt();return}
+const c=e.target.closest('.chip');if(!c)return;const k=c.dataset.c,o=c.dataset.o,A=(S.ans[cur]=S.ans[cur]||{}),a=A[k]||[];if(k==='pick'){A.pick=A.pick===o?'':o;save();renderSt();return}A[k]=a.includes(o)?a.filter(x=>x!==o):a.concat(o);c.classList.toggle('on');c.setAttribute('aria-pressed',A[k].includes(o));save()};
+function setMode(m){document.querySelector('input[name=mode][value="'+m+'"]').checked=true;$('f-yl').textContent=m==='a'?'當時歲數':'年份';$('f-y').placeholder=m==='a'?'例：13':'例：2013'}
+function fill(e){const m=e?e.m||'y':document.querySelector('input[name=mode]:checked').value;setMode(m);$('f-y').value=e?(m==='a'?e.y-S.birth:e.y):'';$('f-t').value=e?e.t:'';$('f-o').value=e&&e.o?e.o:'';$('f-n').value=e?e.n:'';const c=e?e.c:0;document.querySelector('input[name=cat][value="'+c+'"]').checked=true;$('owrap').hidden=c!==6;$('go').textContent=e?'更新':'標出喪失';$('cancel').hidden=!e;$('ft').textContent=e?'修改「'+e.t+'」':'② 標出一個喪失';$('e2').textContent=''}
+function X(y,x0,ppy){return x0+(y-S.birth)*ppy}
+function draw(){
+const p=$('paper');
+if(!S.birth){p.innerHTML='<p class="sm" style="padding:16px;margin:0">先喺①填出生年份，時間線就會出現。</p>';return}
+const span=Math.max(1,NOW-S.birth),x0=80,ppy=Math.max(34,(700-160)/span),W=Math.round(160+span*ppy),x1=x0+span*ppy;
+const L={u:[],d:[]};
+const ev=S.ev.slice().sort((a,b)=>a.y-b.y).map((e,i)=>{const lab=(e.m==='a'?(e.y-S.birth)+'歲':e.y)+' '+e.t,w=Math.max(70,[...lab].length*14+22),x=X(e.y,x0,ppy),cx=Math.max(w/2+4,Math.min(W-w/2-4,x)),s=i%2?'d':'u',a=L[s];let k=0;while(a[k]!==undefined&&cx-w/2<a[k]+6)k++;a[k]=cx+w/2;return{e,lab,w,x,cx,s,k}});
+const axY=75+Math.max(0,L.u.length-1)*44,H=axY+85+Math.max(0,L.d.length-1)*44;
+let h='<line x1="'+x0+'" y1="'+axY+'" x2="'+x1+'" y2="'+axY+'" stroke="var(--line)" stroke-width="2.5" stroke-linecap="round"/>';
+const step=span<=24?2:span<=60?5:10;
+const tk=(y,t)=>{const x=X(y,x0,ppy);h+='<line x1="'+x+'" y1="'+(axY-5)+'" x2="'+x+'" y2="'+(axY+5)+'" stroke="var(--line)" stroke-width="1.5"/><text class="tk" x="'+x+'" y="'+(axY+19)+'">'+t+'</text>'};
+tk(S.birth,'出生・'+S.birth);
+for(let y=S.birth+step;y<NOW;y+=step){if(X(NOW,x0,ppy)-X(y,x0,ppy)>70)tk(y,y+'・'+(y-S.birth)+'歲')}
+tk(NOW,'現在・'+NOW);
+ev.forEach(o=>{const up=o.s==='u',cy=up?axY-36-o.k*44:axY+56+o.k*44,ty=up?cy+17:cy-17,tx=Math.max(o.cx-o.w/2+10,Math.min(o.cx+o.w/2-10,o.x));
+h+='<g class="ev" style="'+cs(o.e.c)+'" tabindex="0" role="button" data-id="'+o.e.id+'" aria-label="修改'+esc(o.lab)+'"><line x1="'+o.x.toFixed(1)+'" y1="'+axY+'" x2="'+tx.toFixed(1)+'" y2="'+ty+'" stroke="hsl(var(--h) var(--s) var(--lbd))" stroke-width="1.2"/><circle cx="'+o.x.toFixed(1)+'" cy="'+axY+'" r="5"/><rect x="'+(o.cx-o.w/2).toFixed(1)+'" y="'+(cy-17)+'" width="'+o.w+'" height="34" rx="8"/><text x="'+o.cx.toFixed(1)+'" y="'+cy+'">'+esc(o.lab)+'</text></g>'});
+p.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" style="min-width:'+W+'px" role="img" aria-label="喪失年表">'+h+'</svg>'}
+function lists(){
+const L=$('plist');L.innerHTML='';
+S.ev.slice().sort((a,b)=>a.y-b.y).forEach(e=>{const d=document.createElement('div');d.className='row';d.innerHTML='<div><b>'+e.y+'（'+(e.y-S.birth)+'歲）　'+esc(e.t)+'</b><span class="tag" style="'+cs(e.c)+'">'+CAT[e.c][0]+(e.o?'：'+esc(e.o):'')+'</span>'+(e.n?'<div class="sm">'+esc(e.n)+'</div>':'')+'</div><div style="white-space:nowrap"><button type="button" class="lk" data-e="'+e.id+'">修改</button><button type="button" class="lk dg" data-d="'+e.id+'">刪除</button></div>';L.appendChild(d)});
+$('listcard').hidden=!S.ev.length;
+const t=$('tgt');t.innerHTML='<option value="all">整張年表</option>'+S.ev.slice().sort((a,b)=>a.y-b.y).map(e=>'<option value="'+e.id+'">'+e.y+'　'+esc(e.t)+'</option>').join('');
+if(cur!=='all'&&!S.ev.some(e=>e.id===cur))cur='all';t.value=cur;loadAns()}
+function loadAns(){renderSt()}
+function render(){$('birth').value=S.birth||'';draw();lists()}
+function edit(id){const e=S.ev.find(x=>x.id===id);if(!e)return;editing=id;fill(e);$('f-t').scrollIntoView({behavior:'smooth',block:'center'});$('f-t').focus()}
+$('setb').onclick=()=>{const v=Math.round(+$('birth').value);if(!(v>=1900&&v<=NOW)){$('e1').textContent='請填 1900 至 '+NOW+' 之間嘅出生年份。';return}
+if(S.ev.some(e=>e.y<v)){$('e1').textContent='有喪失嘅年份早過呢個出生年份，請先修改。';return}
+S.birth=v;$('e1').textContent='';save();render()};
+$('go').onclick=()=>{
+if(!S.birth){$('e2').textContent='請先喺①設定出生年份。';return}
+const m=document.querySelector('input[name=mode]:checked').value,v=Math.round(+$('f-y').value),y=m==='a'?S.birth+v:v,t=$('f-t').value.trim();
+if(!$('f-y').value||!(y>=S.birth&&y<=NOW)){$('e2').textContent=m==='a'?'歲數要喺 0 至 '+(NOW-S.birth)+' 之間。':'年份要喺 '+S.birth+' 至 '+NOW+' 之間。';return}
+
+const c=+document.querySelector('input[name=cat]:checked').value,ot=$('f-o').value.trim();
+if(c===6&&!ot){$('e2').textContent='揀咗「其他」，請寫低係咩類型，例如「失戀」。';$('f-o').focus();return}
+const o={y,m,t:t||(c===6?ot:CAT[c][0]),c,o:c===6?ot:'',n:$('f-n').value.trim()};
+if(editing){S.ev=S.ev.map(e=>e.id===editing?Object.assign({id:editing},o):e)}else{o.id=Date.now().toString(36)+Math.random().toString(36).slice(2,6);S.ev.push(o)}
+editing=null;save();fill(null);render()};
+$('cancel').onclick=()=>{editing=null;fill(null)};
+$('cats').onchange=()=>{$('owrap').hidden=+document.querySelector('input[name=cat]:checked').value!==6};
+$('mode').onchange=()=>{const m=document.querySelector('input[name=mode]:checked').value,v=Math.round(+$('f-y').value);if(S.birth&&v)$('f-y').value=m==='a'?v-S.birth:S.birth+v;setMode(m)};
+$('ochips').innerHTML=OTHERS.map(o=>'<button type="button" class="chip">'+o+'</button>').join('');
+$('ochips').onclick=e=>{const c=e.target.closest('.chip');if(c)$('f-o').value=c.textContent};
+$('paper').onclick=e=>{const g=e.target.closest('.ev');if(g)edit(g.dataset.id)};
+$('paper').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){const g=e.target.closest('.ev');if(g){e.preventDefault();edit(g.dataset.id)}}};
+$('plist').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.e)edit(b.dataset.e);else if(b.dataset.d)arm(b,'確定刪除？',()=>{const id=b.dataset.d;S.ev=S.ev.filter(x=>x.id!==id);delete S.ans[id];if(editing===id){editing=null;fill(null)}save();render()})};
+$('tgt').onchange=()=>{cur=$('tgt').value;loadAns()};
+$('qs').oninput=e=>{const k=e.target.dataset.k;if(!k)return;(S.ans[cur]=S.ans[cur]||{})[k]=e.target.value;save()};
+const bk=$('bkbox'),bm=$('bkmsg');
+$('bk').onclick=()=>{bk.hidden=false;bk.value='SATIRL1:'+btoa(unescape(encodeURIComponent(JSON.stringify(S))));bk.focus();bk.select();try{navigator.clipboard.writeText(bk.value).catch(()=>{})}catch(e){}bm.textContent='備份碼已產生，請全選複製，貼去自己嘅記事簿或者傳畀自己。'};
+$('rs').onclick=e=>{const v=bk.value.trim();if(bk.hidden||!v.startsWith('SATIRL1:')){bk.hidden=false;bk.value='';bk.focus();bm.textContent='請將備份碼貼喺上面，再撳一次「用備份碼還原」。';return}
+arm(e.target,'會取代而家內容，再撳一次確定',()=>{try{const d=JSON.parse(decodeURIComponent(escape(atob(v.slice(9)))));const b=Math.round(+d.birth);if(!(b>=1900&&b<=NOW))throw 0;
+const ev=(Array.isArray(d.ev)?d.ev:[]).map(o=>({id:String(o.id||'').replace(/[^a-z0-9]/gi,'').slice(0,20),y:Math.round(+o.y),m:o.m==='a'?'a':'y',c:CAT[o.c]?+o.c:6,t:String(o.t||'').slice(0,14),o:String(o.o||'').slice(0,8),n:String(o.n||'').slice(0,800)})).filter(o=>o.id&&o.t&&o.y>=b&&o.y<=NOW);
+const ans={};const da=d.ans&&typeof d.ans==='object'?d.ans:{};Object.keys(da).forEach(k=>{const r=da[k];if((k==='all'||ev.some(e=>e.id===k))&&r&&typeof r==='object'){ans[k]={};TK.forEach(q=>{if(typeof r[q]==='string')ans[k][q]=r[q]});Object.keys(OPT).forEach(c=>{if(Array.isArray(r[c]))ans[k][c]=r[c].filter(x=>OPT[c].includes(x))});if(PICK.includes(r.pick))ans[k].pick=r.pick}});
+S={birth:b,ev,ans};cur='all';editing=null;save();fill(null);render();bm.textContent='已還原。'}catch(x){bm.textContent='呢個備份碼讀唔到，請確認有冇複製漏咗。'}})};
+$('clear').onclick=e=>arm(e.target,'確定清除？',()=>{S={birth:null,ev:[],ans:{}};cur='all';editing=null;save();fill(null);render()});
+fill(null);render();
+window.SL={get:()=>S,CAT,ST,CL,fb:A=>fb(A||{})};
+})();</script>
+<script>(function(){
+const $=id=>document.getElementById(id),V=['home','wheel','loss','finish'];
+const LS=k=>{try{return localStorage.getItem(k)}catch(e){return null}},SS=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+function route(o){let h=o||location.hash.slice(1);if(!V.includes(h))h=V.includes(LS('satir-view'))?LS('satir-view'):'home';
+V.forEach(v=>{$('v-'+v).hidden=v!==h});document.querySelectorAll('.top a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+h));SS('satir-view',h);
+if(h==='home'){$('c-wheel').textContent='已加入 '+SW.get().length+' 個人';$('c-loss').textContent='已標出 '+SL.get().ev.length+' 個喪失'}
+if(h==='finish')$('fsum').textContent='目前包括：影響輪（'+SW.get().length+' 個人）、喪失年表（'+SL.get().ev.length+' 個喪失）同你寫過嘅回望、回饋。';
+scrollTo(0,0)}
+addEventListener('hashchange',()=>route());
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a){e.preventDefault();const h=a.getAttribute('href').slice(1);try{location.hash=h}catch(x){}route(h)}});
+route();
+const DK='satir-draft-v1',DF=['f-name','f-taught','f-s','f-carry','f-keep','f-drop','birth','f-y','f-t','f-o','f-n'];
+let dr={};try{dr=JSON.parse(LS(DK)||'{}')||{}}catch(e){}
+DF.forEach(id=>{const el=$(id);if(el&&dr[id])el.value=dr[id]});
+const sd=()=>{DF.forEach(id=>{const el=$(id);if(el)dr[id]=el.value});SS(DK,JSON.stringify(dr))};
+document.addEventListener('input',e=>{if(DF.includes(e.target.id))sd()});
+document.addEventListener('click',e=>{if(e.target.closest('.btn'))setTimeout(sd,0)});
+const msg=t=>{$('xmsg').textContent=t};
+const arm=(b,t,fn)=>{if(b.dataset.a){fn();return}const o=b.textContent;b.dataset.a=1;b.textContent=t;setTimeout(()=>{delete b.dataset.a;b.textContent=o},3500)};
+$('x-clr').onclick=e=>arm(e.target,'確定清除？',()=>{['satir-wheel-v1','satir-loss-v1',DK,'satir-view'].forEach(k=>{try{localStorage.removeItem(k)}catch(x){}});location.reload()});
+const PR=['fill','stroke','stroke-width','stroke-dasharray','stroke-linecap','font-size','font-weight','font-family','text-anchor','dominant-baseline','opacity'];
+function su(svg){const cl=svg.cloneNode(true),o=[svg,...svg.querySelectorAll('*')],n=[cl,...cl.querySelectorAll('*')];
+o.forEach((e,i)=>{const s=getComputedStyle(e);n[i].setAttribute('style',PR.map(p=>p+':'+s.getPropertyValue(p)).join(';'))});
+const vb=svg.viewBox.baseVal,w=vb.width,h=vb.height;cl.setAttribute('xmlns','http://www.w3.org/2000/svg');cl.setAttribute('width',w);cl.setAttribute('height',h);
+return new Promise((res,rej)=>{const im=new Image();im.onload=()=>res({im,w,h});im.onerror=rej;im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(cl))})}
+async function build(){
+const W=1240,H=1754,M=70,bs=getComputedStyle(document.body),BG=bs.backgroundColor,FG=bs.color,F2=getComputedStyle(document.documentElement).getPropertyValue('--tx2').trim()||FG,FONT=bs.fontFamily;
+const pages=[];let c,x,y;
+const np=()=>{c=document.createElement('canvas');c.width=W;c.height=H;x=c.getContext('2d');x.fillStyle=BG;x.fillRect(0,0,W,H);x.textBaseline='top';pages.push(c);y=M};
+const need=h=>{if(y+h>H-M-30)np()};
+const text=(s,sz,col,ind,bold)=>{ind=ind||0;x.font=(bold?'600 ':'')+sz+'px '+FONT;const mw=W-2*M-ind,ls=[];let l='';for(const ch of String(s)){if(ch==='\n'||x.measureText(l+ch).width>mw){ls.push(l);l=ch==='\n'?'':ch}else l+=ch}ls.push(l);
+ls.forEach(t=>{need(sz*1.6);x.font=(bold?'600 ':'')+sz+'px '+FONT;x.fillStyle=col;x.fillText(t,M+ind,y);y+=sz*1.6})};
+const pic=async(svg,mw)=>{if(!svg)return;const r=await su(svg),dw=Math.min(mw,W-2*M),dh=r.h*dw/r.w;need(dh);x.drawImage(r.im,M+(W-2*M-dw)/2,y,dw,dh);y+=dh+16};
+const P=SW.get(),S=SL.get(),CAT=SL.CAT,F=SW.FEEL,ev=S.ev.slice().sort((a,b)=>a.y-b.y);
+np();text('我嘅探索紀錄',44,FG,0,1);text(new Date().toLocaleDateString('zh-HK'),20,F2);y+=16;
+if(P.length){text('影響輪',32,FG,0,1);await pic(document.querySelector('#v-wheel svg'),760);
+P.forEach(p=>{text('● '+p.name+'　'+F[p.feel]+'・影響程度 '+p.s+'/5',26,FG,0,1);[['教咗我',p.taught],['我帶住',p.carry],['想保留',p.keep],['想放低',p.drop]].forEach(a=>a[1]&&text(a[0]+'：'+a[1],22,F2,24));y+=8})}
+if(S.birth){y+=16;text('喪失年表',32,FG,0,1);await pic(document.querySelector('#v-loss .paper svg'),W);
+ev.forEach(e=>{text(e.y+' 年（'+(e.y-S.birth)+' 歲）　'+e.t+'　['+CAT[e.c][0]+(e.o?'：'+e.o:'')+']',24,FG,0,1);e.n&&text(e.n,21,F2,24)})}
+const rf=(A,title,fbk)=>{const r=[];SL.ST.forEach(s=>{if(s.c&&(A[s.c]||[]).length)r.push([s.t+'：'+A[s.c].join('、')]);s.x.forEach(q=>A[q[0]]&&A[q[0]].trim()&&r.push([q[1],A[q[0]]]))});SL.CL.forEach(q=>A[q[0]]&&A[q[0]].trim()&&r.push([q[1],A[q[0]]]));
+if(!r.length&&!fbk)return;y+=14;text(title,28,FG,0,1);r.forEach(q=>{if(q[1]){text(q[0],21,F2);text(q[1],23,FG,24)}else text(q[0],23,FG)});
+if(fbk){const f=SL.fb(A);text('我見到',24,FG,0,1);f.see.forEach(t=>text('・'+t,22,FG,12));text('想帶走嘅問題',24,FG,0,1);f.ask.forEach(t=>text('・'+t,22,FG,12));if(A.pick)text('我揀咗帶走：'+A.pick,23,FG,0,1)}};
+const an=S.ans||{};rf(an.all||{},'回望：整張年表',true);ev.forEach(e=>an[e.id]&&rf(an[e.id],'回望：'+e.y+' '+e.t,false));
+pages.forEach((p,i)=>{const g=p.getContext('2d');g.font='18px '+FONT;g.fillStyle=F2;g.fillText('只存於本機・自我探索工具，並非輔導或治療　'+(i+1)+'/'+pages.length,M,H-50)});
+return pages}
+async function exp(kind){const d=window.claude?await window.claude.use('downloads'):null;if(!d&&window.claude){msg('呢個環境未能輸出檔案，可以用各部分底部嘅備份碼保存內容。');return}const sv=d?(o=>d.save(o)):(o=>{const a=document.createElement('a');a.href=URL.createObjectURL(o.data);a.download=o.filename;document.body.appendChild(a);a.click();a.remove();return Promise.resolve()});
+msg('整理緊，請稍等…');
+try{const pg=await build();let blob,name;
+if(kind==='jpg'){const t=document.createElement('canvas');t.width=pg[0].width;t.height=pg.reduce((a,c)=>a+c.height,0);const g=t.getContext('2d');let o=0;pg.forEach(c=>{g.drawImage(c,0,o);o+=c.height});blob=await new Promise(r=>t.toBlob(r,'image/jpeg',.92));name='探索紀錄.jpg'}
+else{const J=window.jspdf&&window.jspdf.jsPDF;if(!J){msg('PDF 工具載入唔到，請試 JPG。');return}const p=new J({unit:'pt',format:'a4'});pg.forEach((c,i)=>{if(i)p.addPage();p.addImage(c.toDataURL('image/jpeg',.92),'JPEG',0,0,595.28,841.89)});blob=p.output('blob');name='探索紀錄.pdf'}
+await sv({filename:name,data:blob});msg('已輸出。')}
+catch(e){msg(e&&e.code==='declined'?'已取消。':'輸出失敗，請再試一次。')}}
+$('x-jpg').onclick=()=>exp('jpg');$('x-pdf').onclick=()=>exp('pdf');
+})();</script>
+</body></html>
