@@ -59,7 +59,7 @@ a.hc:hover,a.hc:focus-visible{border-color:var(--acc);box-shadow:0 0 0 2px var(-
 #v-family .nm{font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central;fill:var(--tx)}
 #v-family .sb{font-size:12px;fill:var(--tx2);text-anchor:middle}
 </style></head><body>
-<div class="top"><b>自我探索</b><a href="#home">首頁</a><a href="#family">原生家庭圖</a><a href="#wheel">影響輪</a><a href="#loss">喪失年表</a><a href="#finish">完成輸出</a></div>
+<div class="top"><b>自我探索</b><a href="#home">首頁</a><a href="#family">原生家庭圖</a><a href="#wheel">影響輪</a><a href="#loss">喪失年表</a><a href="#life">生活列表</a><a href="#finish">完成輸出</a></div>
 <div class="page">
 <section id="v-home" class="view" hidden>
 <h1 class="ph">自我探索</h1>
@@ -70,7 +70,7 @@ a.hc:hover,a.hc:focus-visible{border-color:var(--acc);box-shadow:0 0 0 2px var(-
 <a class="hc" href="#wheel"><h2>影響輪</h2><p>將影響過你嘅人放喺「我」嘅周圍，睇吓邊啲想繼續帶住，邊啲想放低。</p><span class="sm" id="c-wheel"></span></a>
 <a class="hc" href="#loss"><h2>喪失年表</h2><p>喺一條由出生到而家嘅線上標出重要嘅喪失，再一層一層慢慢回望。會觸動較多情緒，建議喺安靜、有時間嘅時候做。</p><span class="sm" id="c-loss"></span></a>
 <a class="hc" href="#finish"><h2>完成同輸出</h2><p>隨時都可以將目前嘅內容輸出成 JPG 或 PDF。</p></a>
-<div class="hc off"><h2>生活列表</h2><p>籌備中。</p></div>
+<a class="hc" href="#life"><h2>生活列表</h2><p>由出生到而家，將人生入面重要嘅事按年份排喺一條線上，睇吓每個階段發生過咩、你當時點樣。（初模）</p><span class="sm" id="c-life"></span></a>
 </div></section>
 <section id="v-family" class="view" hidden>
 <h1>原生家庭圖</h1>
@@ -78,18 +78,18 @@ a.hc:hover,a.hc:focus-visible{border-color:var(--acc);box-shadow:0 0 0 2px var(-
 <p class="sm">用稱謂（爸爸、嫲嫲、二叔）就得，唔使全名。內容只存喺呢部機，每次修改都會即時儲存。</p>
 <div class="card"><h2>我嘅家庭圖</h2>
 <div class="paper"><svg id="fam" viewBox="0 0 640 400" role="img" aria-label="原生家庭圖"></svg></div>
-<div class="legend"><span style="color:var(--g-bd)">━ 親近</span><span>┅ 疏離</span><span style="color:var(--h-bd)">〰 衝突</span><span>方形＝男　圓形＝女</span><span>邊框顏色＝佢帶畀我嘅感覺</span></div>
+<div class="legend"><span>─ 一般</span><span style="color:var(--g-bd)">━ 親近</span><span>┅ 疏離</span><span style="color:var(--h-bd)">〰 衝突</span><span>方形＝男　圓形＝女　伴侶喺「我」旁邊，子女喺下面一行</span><span>邊框顏色＝佢對我嘅整體影響帶畀我嘅感覺</span></div>
 <p class="sm" style="margin:8px 0 0">撳圖入面嘅人，可以喺下面填佢嘅資料。</p></div>
 <div class="card"><h2>① 加入家人</h2><p class="hint">撳一下就加入圖入面。唔啱用嘅稱呼，加咗之後可以改。</p><div class="chips" id="fchips"></div>
 <label class="l" for="fname">其他家人，自己填</label>
-<div class="frow"><select id="fcat" aria-label="屬於邊位"><option value="g0p">祖父母（爸爸方）</option><option value="g0m">祖父母（媽媽方）</option><option value="g1p">爸爸嘅兄弟姊妹</option><option value="g1m">媽媽嘅兄弟姊妹</option><option value="g1x">其他上一代（例如後父、後母）</option><option value="g2e">我嘅兄弟姊妹（較大）</option><option value="g2y">我嘅兄弟姊妹（較細）</option></select><input type="text" id="fname" maxlength="6" placeholder="稱謂"></div>
+<div class="frow"><select id="fcat" aria-label="屬於邊位"><option value="g0p">祖父母（爸爸方）</option><option value="g0m">祖父母（媽媽方）</option><option value="g1p">爸爸嘅兄弟姊妹</option><option value="g1m">媽媽嘅兄弟姊妹</option><option value="g1x">其他上一代（例如後父、後母）</option><option value="g2e">我嘅兄弟姊妹（較大）</option><option value="g2y">我嘅兄弟姊妹（較細）</option><option value="g2s">我嘅伴侶（丈夫／太太）</option><option value="g3">我嘅子女</option></select><input type="text" id="fname" maxlength="6" placeholder="稱謂"></div>
 <div class="frow" style="margin-top:8px"><select id="fsx" aria-label="形狀"><option value="m">男（方形）</option><option value="f">女（圓形）</option><option value="x">其他</option></select><button type="button" class="btn o" id="fadd">加入</button></div>
 <p class="err" id="ferr" role="alert"></p></div>
 <div class="card" id="fpanel"></div>
 <div class="card"><h2>③ 畫出關係</h2>
-<p class="hint">想一想：你同爸爸之間係點？爸爸同媽媽之間呢？兄弟姊妹之間呢？有幾段就加幾段。</p>
+<p class="hint">想一想：你同爸爸之間係點？你同伴侶、子女之間呢？爸爸同媽媽之間呢？兄弟姊妹之間呢？有幾段就加幾段。</p>
 <div class="frow"><select id="ra" aria-label="第一個人"></select><select id="rb" aria-label="第二個人"></select></div>
-<div class="seg" style="margin-top:8px"><label><input type="radio" name="rt" value="close">親近</label><label><input type="radio" name="rt" value="far">疏離</label><label><input type="radio" name="rt" value="conflict">衝突</label></div>
+<div class="seg" style="margin-top:8px"><label><input type="radio" name="rt" value="neutral">一般</label><label><input type="radio" name="rt" value="close">親近</label><label><input type="radio" name="rt" value="far">疏離</label><label><input type="radio" name="rt" value="conflict">衝突</label></div>
 <input type="text" id="rn" maxlength="30" placeholder="想補充幾個字（選填）" style="margin-top:8px">
 <p class="err" id="rerr" role="alert"></p>
 <div class="btns" style="margin-top:0"><button type="button" class="btn" id="radd">加入呢段關係</button></div>
@@ -192,6 +192,37 @@ a.hc:hover,a.hc:focus-visible{border-color:var(--acc);box-shadow:0 0 0 2px var(-
 <div class="btns" style="margin-top:0"><button type="button" class="btn o" id="bk">產生備份碼</button><button type="button" class="btn o" id="rs">用備份碼還原</button><button type="button" class="lk dg" id="clear">清除全部資料</button></div>
 <textarea id="bkbox" style="margin-top:10px" hidden aria-label="備份碼" spellcheck="false"></textarea>
 <p id="bkmsg" class="sm" aria-live="polite"></p></div>
+<p class="foot">呢個係自我探索工具，唔係輔導或治療。如果寫嘅時候感到好難受，請搵信任嘅人或者專業人士陪你一齊傾。</p>
+</section>
+<style>
+#v-life h1{font-size:26px;font-weight:600;margin:6px 0 4px}#v-life h2{font-size:18px;font-weight:600;margin:0 0 6px}#v-life .sub{color:var(--tx2);margin:0 0 6px}#v-life .sm,#v-life .hint{font-size:14px;color:var(--tx2)}#v-life .hint{margin:0 0 6px}
+#v-life .card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin-top:16px}#v-life label.l{display:block;font-weight:500;margin:14px 0 2px}
+#v-life input[type=text],#v-life input[type=number],#v-life textarea{width:100%;font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px 10px}#v-life textarea{resize:vertical;min-height:64px}
+#v-life .seg{display:flex;flex-wrap:wrap;gap:8px}#v-life .seg label{position:relative;border:1px solid var(--bd);border-radius:8px;padding:5px 12px;cursor:pointer}#v-life .seg input{position:absolute;opacity:0;inset:0;cursor:pointer}#v-life .seg label:has(:checked){background:var(--p-bg);border-color:var(--p-bd);color:var(--p-tx)}
+#v-life .seg .good:has(:checked){background:var(--g-bg);border-color:var(--g-bd);color:var(--g-tx)}#v-life .seg .mixed:has(:checked){background:var(--m-bg);border-color:var(--m-bd);color:var(--m-tx)}#v-life .seg .hard:has(:checked){background:var(--h-bg);border-color:var(--h-bd);color:var(--h-tx)}
+#v-life input:focus-visible,#v-life textarea:focus-visible,#v-life button:focus-visible,#v-life .seg label:has(input:focus-visible){outline:2px solid var(--acc);outline-offset:2px}
+#v-life .btns{display:flex;gap:10px;margin-top:14px;align-items:center;flex-wrap:wrap}#v-life .btn{font:inherit;font-weight:500;min-height:44px;padding:0 18px;border-radius:8px;border:1px solid var(--acc);background:var(--acc);color:var(--acc-tx);cursor:pointer}#v-life .btn.o{background:none;color:var(--acc)}#v-life .lk{font:inherit;font-size:14px;background:none;border:0;color:var(--acc);padding:4px 8px;cursor:pointer}#v-life .lk.dg{color:var(--dg)}#v-life .err{color:var(--dg);font-size:14px;margin:6px 0 0;min-height:1.4em}
+#v-life .paper{overflow-x:auto;border:1px dashed var(--bd);border-radius:8px;background:var(--bg)}#v-life svg{display:block;width:100%;height:auto}#v-life .ev{cursor:pointer;outline:none}#v-life .ev rect{fill:var(--card);stroke:var(--line);stroke-width:1.2}#v-life .ev text{fill:var(--tx);font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:central}#v-life .ev.good rect{fill:var(--g-bg);stroke:var(--g-bd)}#v-life .ev.good text{fill:var(--g-tx)}#v-life .ev.mixed rect{fill:var(--m-bg);stroke:var(--m-bd)}#v-life .ev.mixed text{fill:var(--m-tx)}#v-life .ev.hard rect{fill:var(--h-bg);stroke:var(--h-bd)}#v-life .ev.hard text{fill:var(--h-tx)}#v-life .ev:hover rect,#v-life .ev:focus-visible rect{stroke-width:3}#v-life .tk{font-size:12px;fill:var(--tx2);text-anchor:middle}
+#v-life .row{display:flex;justify-content:space-between;gap:8px;padding:10px 0;border-top:1px solid var(--bd)}#v-life .row:first-child{border-top:0}#v-life .tag{font-size:13px;margin-left:8px;padding:0 8px;border-radius:10px;border:1px solid var(--bd)}#v-life .foot{margin-top:20px;font-size:14px;color:var(--tx2)}
+</style>
+<section id="v-life" class="view" hidden>
+<h1>生活列表 <span class="sm">（初模）</span></h1>
+<p class="sub">由出生到而家，將人生入面重要嘅事按年份排喺一條線上。年份之間嘅距離按時間比例畫，所以空白嘅年月唔會浪費位置，密集嘅時期亦唔會迫埋一齊。</p>
+<p class="sm">除咗喪失，好事、轉變、第一次、重要決定都可以記。全部選填，只有出生年同事件名要寫。內容只存喺呢部機，每次修改即時儲存。</p>
+<div class="card"><h2>我嘅生活列表</h2><div class="paper"><svg id="l-svg" viewBox="0 0 900 400" role="img" aria-label="生活列表"></svg></div><p class="sm" id="l-empty">先填出生年，再加入第一件事。撳圖入面嘅事件可以修改。</p></div>
+<div class="card"><h2>① 出生年份</h2><input type="number" id="l-birth" inputmode="numeric" placeholder="例：1985"><p class="err" id="l-e1" role="alert"></p>
+<h2 id="l-ft" style="margin-top:18px">② 加入一件事</h2>
+<div class="seg"><label><input type="radio" name="lmode" value="y" checked>用年份</label><label><input type="radio" name="lmode" value="a">用當時歲數</label></div>
+<label class="l" for="l-y" id="l-yl">年份</label><input type="number" id="l-y" inputmode="numeric" placeholder="例：1998">
+<label class="l" for="l-t">發生咗咩事？</label><input type="text" id="l-t" maxlength="12" placeholder="例：入小學、搬屋、轉工">
+<label class="l">屬於邊類？</label><div class="seg" id="l-cats"></div>
+<div id="l-ow" hidden><label class="l" for="l-o">呢個類型叫咩名？</label><input type="text" id="l-o" maxlength="8" placeholder="例：信仰、創傷"></div>
+<label class="l">而家望返，嗰件事帶畀你嘅感覺係…</label><div class="seg"><label class="good"><input type="radio" name="lf" value="good">正面</label><label class="mixed"><input type="radio" name="lf" value="mixed">好複雜</label><label class="hard"><input type="radio" name="lf" value="hard">艱難</label><label><input type="radio" name="lf" value="" checked>未知／唔想揀</label></div>
+<label class="l" for="l-fam">當時屋企或者身邊發生緊咩？（選填）</label><textarea id="l-fam"></textarea>
+<label class="l" for="l-n">想補充嘅說話（選填）</label><textarea id="l-n"></textarea>
+<p class="err" id="l-e2" role="alert"></p><div class="btns"><button type="button" class="btn" id="l-go">加入列表</button><button type="button" class="btn o" id="l-cancel" hidden>取消修改</button></div></div>
+<div class="card"><h2>已記低嘅事</h2><div id="l-list"></div></div>
+<div class="card"><h2>備份同還原</h2><p class="hint">資料淨係存喺呢部機。可以產生備份碼，複製後貼去自己嘅記事簿，之後貼返入嚟就可以還原（會取代而家內容）。</p><div class="btns" style="margin-top:0"><button type="button" class="btn o" id="l-bk">產生備份碼</button><button type="button" class="btn o" id="l-rs">用備份碼還原</button></div><textarea id="l-box" style="margin-top:10px" hidden aria-label="備份碼" spellcheck="false"></textarea><p id="l-msg" class="sm" aria-live="polite"></p></div>
 <p class="foot">呢個係自我探索工具，唔係輔導或治療。如果寫嘅時候感到好難受，請搵信任嘅人或者專業人士陪你一齊傾。</p>
 </section>
 <section id="v-finish" class="view" hidden>
@@ -391,9 +422,9 @@ const R0=document.getElementById('v-family'),$=id=>R0.querySelector('#'+id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const KEY='satir-family-v1',FL=['me','dad','mom'],R=30;
 const COPE={1:'好似冇事，遷就晒人',2:'指責、鬧人',3:'講道理、好冷靜，唔提感受',4:'轉移話題、扮冇事',5:'算平穩，會直接講出感受'};
-const TS={close:['親近','--g-bd',4,''],far:['疏離','--tx2',2.5,'7 6'],conflict:['衝突','--h-bd',2.5,'']};
-const CAT=[['爺爺','g0p','m'],['嫲嫲','g0p','f'],['公公','g0m','m'],['婆婆','g0m','f'],['哥哥','g2e','m'],['姐姐','g2e','f'],['弟弟','g2y','m'],['妹妹','g2y','f'],['叔伯','g1p','m'],['姑姐','g1p','f'],['舅父','g1m','m'],['姨媽','g1m','f']];
-const mk=(id,n,g,sd,sx,o)=>({id,n,g,sd,sx,o,adj:'',cope:'',infl:'',note:'',feel:''});
+const TS={neutral:['一般','--tx2',2,''],close:['親近','--g-bd',4,''],far:['疏離','--tx2',2.5,'7 6'],conflict:['衝突','--h-bd',2.5,'']};
+const CAT=[['爺爺','g0p','m'],['嫲嫲','g0p','f'],['公公','g0m','m'],['婆婆','g0m','f'],['哥哥','g2e','m'],['姐姐','g2e','f'],['弟弟','g2y','m'],['妹妹','g2y','f'],['叔伯','g1p','m'],['姑姐','g1p','f'],['舅父','g1m','m'],['姨媽','g1m','f'],['丈夫','g2s','m'],['太太','g2s','f'],['伴侶','g2s','x'],['子女','g3','x']];
+const mk=(id,n,g,sd,sx,o)=>({id,n,g,sd,sx,o,adj:'',cope:'',infl:'',feel:''});
 const base=()=>({people:[mk('me','我',2,'','x',0),mk('dad','爸爸',1,'p','m',0),mk('mom','媽媽',1,'m','f',0)],rel:[],rules:'',sel:'me'});
 let F=base();
 try{const d=JSON.parse(localStorage.getItem(KEY)||'null');if(d&&Array.isArray(d.people)&&Array.isArray(d.rel))F=Object.assign(F,d)}catch(e){}
@@ -409,9 +440,10 @@ const rk=p=>p.id==='dad'?1:p.id==='mom'?2:p.sd==='p'?0:p.sd==='m'?3:4;
 const r0=P.filter(p=>p.g===0).sort((a,b)=>(a.sd==='m')-(b.sd==='m')||I(a)-I(b));
 const r1=P.filter(p=>p.g===1).sort((a,b)=>rk(a)-rk(b)||I(a)-I(b));
 const r2=P.filter(p=>p.g===2).sort((a,b)=>(a.o||0)-(b.o||0)||I(a)-I(b));
-const rows=[r0,r1,r2].filter(r=>r.length),W=Math.max(640,Math.max(...rows.map(r=>r.length))*118+40),pos={};
+const r3=P.filter(p=>p.g===3).sort((a,b)=>I(a)-I(b));
+const rows=[r0,r1,r2,r3].filter(r=>r.length),W=Math.max(640,Math.max(...rows.map(r=>r.length))*118+40),pos={};
 rows.forEach((r,ri)=>r.forEach((p,i)=>{pos[p.id]={x:W*(i+1)/(r.length+1),y:70+ri*165}}));
-return{r0,r1,r2,pos,W,H:70+(rows.length-1)*165+R+50}}
+return{r0,r1,r2,r3,pos,W,H:70+(rows.length-1)*165+R+50}}
 function rp(a,b,k){let sx,sy,ex,ey,cx,cy;const d=k%2?1:-1;
 if(Math.abs(a.y-b.y)<5){const off=R+46+Math.floor(k/2)*14;sx=a.x;sy=a.y+d*R;ex=b.x;ey=b.y+d*R;cx=(a.x+b.x)/2;cy=a.y+d*off}
 else{const dx=b.x-a.x,dy=b.y-a.y,l=Math.hypot(dx,dy),ux=dx/l,uy=dy/l;sx=a.x+ux*(R+3);sy=a.y+uy*(R+3);ex=b.x-ux*(R+3);ey=b.y-uy*(R+3);cx=(sx+ex)/2-uy*26*d;cy=(sy+ey)/2+ux*26*d}
@@ -420,12 +452,13 @@ function zig(p){const n=Math.max(8,Math.round(Math.hypot(p.ex-p.sx,p.ey-p.sy)/10
 for(let i=0;i<=n;i++){const t=i/n,u=1-t,x=u*u*p.sx+2*u*t*p.cx+t*t*p.ex,y=u*u*p.sy+2*u*t*p.cy+t*t*p.ey,dx=2*u*(p.cx-p.sx)+2*t*(p.ex-p.cx),dy=2*u*(p.cy-p.sy)+2*t*(p.ey-p.cy),l=Math.hypot(dx,dy)||1,o=(i&&i<n)?(i%2?5:-5):0;pts.push((x-dy/l*o).toFixed(1)+','+(y+dx/l*o).toFixed(1))}
 return'M'+pts.join('L')}
 function draw(){
-const {r0,r1,r2,pos,W,H}=lay(),Ls=[],P=F.people;
+const {r0,r1,r2,r3,pos,W,H}=lay(),Ls=[],P=F.people;
 const par=(set,kids)=>{if(!set.length||!kids.length)return;const xs=set.map(p=>pos[p.id].x),ax=xs.reduce((a,b)=>a+b)/xs.length,y0=pos[set[0].id].y,ay=set.length>1?y0:y0+R;
 kids.forEach(c=>{const q=pos[c.id],ym=(ay+q.y-R)/2;Ls.push('M'+ax+' '+ay+'V'+ym+'H'+q.x+'V'+(q.y-R))})};
 const cpl=set=>{for(let i=1;i<set.length;i++){const a=pos[set[i-1].id],b=pos[set[i].id];Ls.push('M'+(a.x+R)+' '+a.y+'H'+(b.x-R))}};
 const gp=s=>r0.filter(p=>p.sd===s),ch=s=>r1.filter(p=>p.sd===s),dm=[P.find(p=>p.id==='dad'),P.find(p=>p.id==='mom')];
-cpl(gp('p'));cpl(gp('m'));par(gp('p'),ch('p'));par(gp('m'),ch('m'));cpl(dm);par(dm,r2);
+cpl(gp('p'));cpl(gp('m'));par(gp('p'),ch('p'));par(gp('m'),ch('m'));cpl(dm);par(dm,r2.filter(p=>p.sd!=='s'));
+const mp=r2.filter(p=>p.id==='me'||p.sd==='s');cpl(mp);par(mp,r3);
 let h='<path d="'+Ls.join('')+'" fill="none" stroke="var(--line)" stroke-width="1.5"/>';
 const cnt={};
 F.rel.forEach(r=>{const a=pos[r.a],b=pos[r.b],t=TS[r.t];if(!a||!b||!t)return;const key=Math.round(a.y)+(Math.abs(a.y-b.y)<5?'s':'d'),k=cnt[key]||0;cnt[key]=k+1;const p=rp(a,b,k);
@@ -437,20 +470,18 @@ const f=$('fam');f.setAttribute('viewBox','0 0 '+W+' '+H);f.style.minWidth=W+'px
 function panel(){
 const p=cur(),me=p.id==='me',core=FL.includes(p.id);
 const rd=(k,v,l,ck)=>'<label><input type="radio" name="r_'+k+'" data-k="'+k+'" value="'+v+'"'+(ck?' checked':'')+'>'+l+'</label>';
-$('fpanel').innerHTML='<h2>② 填「'+esc(nm(p))+'」嘅資料</h2><p class="hint">先揀選項，再寫字。全部選填，改完會即時儲存。</p>'
+$('fpanel').innerHTML='<h2>② 填「'+esc(nm(p))+'」嘅資料</h2><p class="hint">全部選填，寫幾多都得，改完會即時儲存。</p>'
 +'<label class="l" for="p-n">稱謂</label><input type="text" id="p-n" data-k="n" maxlength="6" value="'+esc(p.n)+'">'
 +'<label class="l">圖入面用邊種形狀？</label><div class="seg">'+rd('sx','m','男（方形）',p.sx==='m')+rd('sx','f','女（圓形）',p.sx==='f')+rd('sx','x','其他',p.sx==='x')+'</div>'
-+'<label class="l">壓力大嗰陣，'+(me?'你':'佢')+'通常…</label><div class="seg">'+Object.keys(COPE).map(k=>rd('cope',k,COPE[k],p.cope===k)).join('')+rd('cope','','唔肯定，跳過',!p.cope)+'</div>'
-+(me?'':'<label class="l">呢份影響，帶畀我嘅感覺係…</label><div class="seg">'+rd('feel','good','支持到我',p.feel==='good')+rd('feel','mixed','兩樣都有',p.feel==='mixed')+rd('feel','hard','壓力較多',p.feel==='hard')+'</div>')
 +'<label class="l" for="p-a">用幾個字形容'+(me?'你自己':'佢')+'</label><input type="text" id="p-a" data-k="adj" maxlength="24" placeholder="例：勤力、沉默、愛操心" value="'+esc(p.adj)+'">'
-+(me?'':'<label class="l" for="p-i">佢影響咗我咩？我從佢身上學到咩？</label><textarea id="p-i" data-k="infl">'+esc(p.infl)+'</textarea>')
-+'<label class="l" for="p-o">補充（選填）</label><textarea id="p-o" data-k="note">'+esc(p.note||'')+'</textarea>'
++'<label class="l" for="p-c">壓力大嗰陣，'+(me?'你':'佢')+'通常…</label><select id="p-c" data-k="cope"><option value="">（唔肯定，跳過）</option>'+Object.keys(COPE).map(k=>'<option value="'+k+'"'+(p.cope===k?' selected':'')+'>'+COPE[k]+'</option>').join('')+'</select>'
++(me?'':'<label class="l" for="p-i">佢影響咗我咩？我從佢身上學到咩？</label><textarea id="p-i" data-k="infl">'+esc(p.infl)+'</textarea><label class="l">整體嚟講，佢對我嘅影響，令我覺得…</label><p class="hint">指你同佢相處、受佢影響之後嘅整體感受。佢壓力大時嘅表現，喺上面嗰題揀。</p><div class="seg">'+rd('feel','good','支持到我',p.feel==='good')+rd('feel','mixed','兩樣都有',p.feel==='mixed')+rd('feel','hard','壓力較多',p.feel==='hard')+'</div>')
 +(core?'':'<div class="btns"><button type="button" class="lk dg" data-del="1">刪除呢個人</button></div>')}
 function chips(){$('fchips').innerHTML=CAT.map(c=>{const ex=F.people.some(p=>p.g===0&&p.n===c[0]&&c[1][1]==='0');return'<button type="button" class="chip" data-c="'+c[0]+'"'+(ex?' disabled':'')+'>＋ '+c[0]+'</button>'}).join('')}
 function relSel(){['ra','rb'].forEach((id,i)=>{const s=$(id),v=s.value;s.innerHTML=F.people.map(p=>'<option value="'+p.id+'">'+esc(nm(p))+'</option>').join('');s.value=F.people.some(p=>p.id===v)?v:F.people[i?Math.min(1,F.people.length-1):0].id})}
 function rlist(){$('rlist').innerHTML=F.rel.map((r,i)=>{const a=F.people.find(p=>p.id===r.a),b=F.people.find(p=>p.id===r.b);return a&&b?'<div class="row"><div><b>'+esc(nm(a))+' — '+esc(nm(b))+'</b><span class="tag">'+TS[r.t][0]+'</span>'+(r.note?'<div class="sm">'+esc(r.note)+'</div>':'')+'</div><button type="button" class="lk dg" data-i="'+i+'">刪除</button></div>':''}).join('')||'<p class="sm">未有關係。</p>'}
 function all(){draw();panel();chips();relSel();rlist();$('frules').value=F.rules}
-function addP(n,c,sx){const g=+c[1],l=c[2],p=mk('p'+Date.now().toString(36)+Math.random().toString(36).slice(2,5),n.slice(0,6),g,(l==='p'||l==='m'||l==='x')?l:'',sx,l==='e'?-1:l==='y'?1:0);F.people.push(p);F.sel=p.id;save();all()}
+function addP(n,c,sx){const g=+c[1],l=c[2],p=mk('p'+Date.now().toString(36)+Math.random().toString(36).slice(2,5),n.slice(0,6),g,(l==='p'||l==='m'||l==='x'||l==='s')?l:'',sx,l==='e'?-1:l==='y'?1:l==='s'?0.5:0);F.people.push(p);F.sel=p.id;save();all()}
 $('fchips').onclick=e=>{const b=e.target.closest('[data-c]');if(!b||b.disabled)return;const c=CAT.find(x=>x[0]===b.dataset.c);addP(c[0],c[1],c[2])};
 $('fadd').onclick=()=>{const n=$('fname').value.trim();if(!n){$('ferr').textContent='請寫一個稱謂，例如「二叔」。';return}$('ferr').textContent='';addP(n,$('fcat').value,$('fsx').value);$('fname').value=''};
 $('fam').onclick=e=>{const g=e.target.closest('.fp');if(g){F.sel=g.dataset.id;save();draw();panel();$('fpanel').scrollIntoView({behavior:'smooth',block:'start'})}};
@@ -458,7 +489,7 @@ $('fam').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){const g=e.target.closest
 $('fpanel').oninput=e=>{const k=e.target.dataset.k;if(!k)return;cur()[k]=e.target.value;save();draw();if(k==='n'){relSel();rlist();chips();$('fpanel').querySelector('h2').textContent='② 填「'+nm(cur())+'」嘅資料'}};
 $('fpanel').onclick=e=>{const b=e.target.closest('[data-del]');if(b)arm(b,'確定刪除？',()=>{const id=F.sel;F.people=F.people.filter(p=>p.id!==id);F.rel=F.rel.filter(r=>r.a!==id&&r.b!==id);F.sel='me';save();all()})};
 $('radd').onclick=()=>{const a=$('ra').value,b=$('rb').value,t=(R0.querySelector('input[name=rt]:checked')||{}).value;
-if(a===b){$('rerr').textContent='請揀兩個唔同嘅人。';return}if(!t){$('rerr').textContent='請揀呢段關係係親近、疏離定衝突。';return}
+if(a===b){$('rerr').textContent='請揀兩個唔同嘅人。';return}if(!t){$('rerr').textContent='請揀呢段關係係一般、親近、疏離定衝突。';return}
 F.rel.push({a,b,t,note:$('rn').value.trim().slice(0,30)});$('rn').value='';$('rerr').textContent='';save();draw();rlist()};
 $('rlist').onclick=e=>{const b=e.target.closest('[data-i]');if(b)arm(b,'確定？',()=>{F.rel.splice(+b.dataset.i,1);save();draw();rlist()})};
 $('frules').oninput=e=>{F.rules=e.target.value;save()};
@@ -466,25 +497,69 @@ const bk=$('bkbox'),bm=$('bkmsg');
 $('bk').onclick=()=>{bk.hidden=false;bk.value='SATIRF1:'+btoa(unescape(encodeURIComponent(JSON.stringify(F))));bk.focus();bk.select();try{navigator.clipboard.writeText(bk.value).catch(()=>{})}catch(e){}bm.textContent='備份碼已產生，請全選複製，貼去自己嘅記事簿或者傳畀自己。'};
 $('rs').onclick=e=>{const v=bk.value.trim();if(bk.hidden||!v.startsWith('SATIRF1:')){bk.hidden=false;bk.value='';bk.focus();bm.textContent='請將備份碼貼喺上面，再撳一次「用備份碼還原」。';return}
 arm(e.target,'會取代而家內容，再撳一次確定',()=>{try{const d=JSON.parse(decodeURIComponent(escape(atob(v.slice(8)))));if(!Array.isArray(d.people)||!Array.isArray(d.rel))throw 0;
-const ps=d.people.map(p=>({id:String(p.id||'').replace(/[^a-z0-9]/gi,'').slice(0,20),n:String(p.n||'').slice(0,6),g:[0,1,2].includes(+p.g)?+p.g:1,sd:['p','m','x',''].includes(p.sd)?p.sd:'',sx:['m','f','x'].includes(p.sx)?p.sx:'x',o:[-1,0,1].includes(+p.o)?+p.o:0,adj:String(p.adj||'').slice(0,24),cope:COPE[p.cope]?String(p.cope):'',infl:String(p.infl||'').slice(0,800),note:String(p.note||'').slice(0,800),feel:['good','mixed','hard'].includes(p.feel)?p.feel:''})).filter(p=>p.id);
+const ps=d.people.map(p=>({id:String(p.id||'').replace(/[^a-z0-9]/gi,'').slice(0,20),n:String(p.n||'').slice(0,6),g:[0,1,2,3].includes(+p.g)?+p.g:1,sd:['p','m','x','s',''].includes(p.sd)?p.sd:'',sx:['m','f','x'].includes(p.sx)?p.sx:'x',o:[-1,0,0.5,1].includes(+p.o)?+p.o:0,adj:String(p.adj||'').slice(0,24),cope:COPE[p.cope]?String(p.cope):'',infl:String(p.infl||'').slice(0,800),feel:['good','mixed','hard'].includes(p.feel)?p.feel:''})).filter(p=>p.id);
 FL.forEach(id=>{if(!ps.some(p=>p.id===id))ps.push(base().people.find(p=>p.id===id))});const ids=ps.map(p=>p.id);
 F={people:ps,rel:d.rel.filter(r=>ids.includes(r.a)&&ids.includes(r.b)&&TS[r.t]).map(r=>({a:r.a,b:r.b,t:r.t,note:String(r.note||'').slice(0,30)})),rules:String(d.rules||'').slice(0,1500),sel:'me'};save();all();bm.textContent='已還原。'}catch(x){bm.textContent='呢個備份碼讀唔到，請確認有冇複製漏咗。'}})};
-window.SF={get:()=>F,COPE,T:{close:{n:'親近'},far:{n:'疏離'},conflict:{n:'衝突'}}};
+window.SF={get:()=>F,COPE,T:{neutral:{n:'一般'},close:{n:'親近'},far:{n:'疏離'},conflict:{n:'衝突'}}};
 all();
 })();
 </script>
 <script>(function(){
-const $=id=>document.getElementById(id),V=['home','family','wheel','loss','finish'];
+const R=document.getElementById('v-life'),$=id=>document.getElementById(id),NOW=new Date().getFullYear();
+const CAT=['家庭','學習','工作','關係','健康','搬遷／轉變','其他'],FEEL={good:'正面',mixed:'好複雜',hard:'艱難'},KEY='satir-life-v1';
+const E=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let L={birth:'',ev:[]},editing=null;
+try{const d=JSON.parse(localStorage.getItem(KEY)||'null');if(d&&Array.isArray(d.ev))L=d}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(L))}catch(e){}};
+function arm(b,t,fn){if(b.dataset.a){fn();return}const o=b.textContent;b.dataset.a=1;b.textContent=t;setTimeout(()=>{delete b.dataset.a;b.textContent=o},3500)}
+$('l-cats').innerHTML=CAT.map((c,i)=>'<label><input type="radio" name="lc" value="'+i+'"'+(i===0?' checked':'')+'>'+c+'</label>').join('');
+const mode=()=>R.querySelector('input[name=lmode]:checked').value;
+const feel=()=>R.querySelector('input[name=lf]:checked').value;
+const cat=()=>+R.querySelector('input[name=lc]:checked').value;
+function setMode(m){R.querySelector('input[name=lmode][value='+m+']').checked=true;$('l-yl').textContent=m==='a'?'當時歲數':'年份';$('l-y').placeholder=m==='a'?'例：13':'例：1998'}
+function fill(e){const m=e?(e.m||'y'):mode();setMode(m);$('l-y').value=e?(m==='a'&&L.birth?e.y-L.birth:e.y):'';$('l-t').value=e?e.t:'';$('l-o').value=e&&e.o?e.o:'';$('l-fam').value=e?e.fam:'';$('l-n').value=e?e.n:'';
+R.querySelector('input[name=lc][value="'+(e?e.c:0)+'"]').checked=true;R.querySelector('input[name=lf][value="'+(e?e.f:'')+'"]').checked=true;$('l-ow').hidden=(e?e.c:0)!==6;$('l-go').textContent=e?'更新':'加入列表';$('l-cancel').hidden=!e;$('l-ft').textContent=e?'修改「'+e.t+'」':'② 加入一件事';$('l-e2').textContent=''}
+function draw(){const sv=$('l-svg'),b=+L.birth,ev=L.ev.slice().sort((a,c)=>a.y-c.y);
+if(!b||!ev.length){sv.setAttribute('viewBox','0 0 900 120');sv.innerHTML='<line x1="40" x2="860" y1="60" y2="60" stroke="var(--line)" stroke-width="3"/>'+(b?'<text class="tk" x="40" y="86">'+b+'</text>':'');$('l-empty').hidden=!!ev.length;return}
+$('l-empty').hidden=true;const W=900,A=200,x0=40,x1=W-40,end=Math.max(NOW,...ev.map(e=>e.y)),sp=Math.max(1,end-b),X=y=>x0+(y-b)/sp*(x1-x0),step=sp>60?10:sp>25?5:sp>10?2:1;
+let h='<line x1="'+x0+'" x2="'+x1+'" y1="'+A+'" y2="'+A+'" stroke="var(--line)" stroke-width="3"/>';
+for(let y=Math.ceil(b/step)*step;y<=end;y+=step)h+='<line x1="'+X(y)+'" x2="'+X(y)+'" y1="'+(A-5)+'" y2="'+(A+5)+'" stroke="var(--line)"/><text class="tk" x="'+X(y)+'" y="'+(A+22)+'">'+y+'</text>';
+h+='<text class="tk" x="'+x0+'" y="'+(A+40)+'">出生 '+b+'</text><text class="tk" x="'+x1+'" y="'+(A+40)+'">'+end+'</text>';
+ev.forEach((e,i)=>{const x=X(e.y),up=i%2===0,lv=Math.floor(i/2)%3,w=Math.min(150,e.t.length*15+20),lx=Math.max(4,Math.min(W-w-4,x-w/2)),ty=up?A-52-lv*40:A+60+lv*40;
+h+='<g class="ev '+(e.f||'')+'" tabindex="0" role="button" data-id="'+e.id+'" aria-label="'+E(e.t)+'"><line x1="'+x+'" x2="'+x+'" y1="'+A+'" y2="'+(up?ty+15:ty-15)+'" stroke="var(--line)"/><circle cx="'+x+'" cy="'+A+'" r="5" fill="var(--acc)"/><rect x="'+lx+'" y="'+(ty-15)+'" width="'+w+'" height="30" rx="8"/><text x="'+(lx+w/2)+'" y="'+ty+'">'+E(e.t)+'</text></g>'});
+sv.setAttribute('viewBox','0 0 '+W+' 400');sv.innerHTML=h}
+function lists(){const b=+L.birth,ev=L.ev.slice().sort((a,c)=>a.y-c.y);$('l-list').innerHTML=ev.map(e=>'<div class="row"><div><b>'+e.y+' 年'+(b?'（'+(e.y-b)+' 歲）':'')+'　'+E(e.t)+'</b><span class="tag">'+E(CAT[e.c]+(e.o?'：'+e.o:''))+'</span>'+(e.f?'<span class="tag">'+FEEL[e.f]+'</span>':'')+(e.fam?'<div class="sm">身邊：'+E(e.fam)+'</div>':'')+(e.n?'<div class="sm">'+E(e.n)+'</div>':'')+'</div><div style="white-space:nowrap"><button type="button" class="lk" data-ed="'+e.id+'">修改</button><button type="button" class="lk dg" data-dl="'+e.id+'">刪除</button></div></div>').join('')||'<p class="sm">未有記錄。</p>'}
+function render(){$('l-birth').value=L.birth||'';draw();lists()}
+function edit(id){const e=L.ev.find(x=>x.id===id);if(!e)return;editing=id;fill(e);$('l-t').scrollIntoView({behavior:'smooth',block:'center'});$('l-t').focus()}
+$('l-birth').onchange=()=>{const v=+$('l-birth').value;if(!v){L.birth='';$('l-e1').textContent='';save();render();return}if(v<1900||v>NOW){$('l-e1').textContent='請輸入 1900 至 '+NOW+' 之間嘅年份。';return}$('l-e1').textContent='';L.birth=v;save();render()};
+R.addEventListener('change',e=>{if(e.target.name==='lmode'){const y=$('l-y').value;setMode(e.target.value);$('l-y').value=''}if(e.target.name==='lc')$('l-ow').hidden=+e.target.value!==6});
+$('l-go').onclick=()=>{const t=$('l-t').value.trim(),m=mode(),v=+$('l-y').value;if(!L.birth){$('l-e2').textContent='請先喺①填出生年。';return}if(!t){$('l-e2').textContent='請寫低發生咗咩事。';return}if(!$('l-y').value){$('l-e2').textContent=m==='a'?'請填當時歲數。':'請填年份。';return}
+const y=m==='a'?+L.birth+v:v;if(y<L.birth||y>NOW){$('l-e2').textContent='呢個時間喺出生年之前或者未發生，請檢查。';return}const c=cat(),o=$('l-o').value.trim();if(c===6&&!o){$('l-e2').textContent='揀「其他」請寫低類型，工具先可以改進。';return}
+const e={id:editing||'e'+Date.now().toString(36),y,m,t,c,o:c===6?o:'',f:feel(),fam:$('l-fam').value.trim(),n:$('l-n').value.trim()};
+if(editing){const i=L.ev.findIndex(x=>x.id===editing);L.ev[i]=e}else L.ev.push(e);editing=null;save();fill(null);render()};
+$('l-cancel').onclick=()=>{editing=null;fill(null)};
+$('l-list').onclick=e=>{const d=e.target.closest('[data-ed]');if(d){edit(d.dataset.ed);return}const x=e.target.closest('[data-dl]');if(x)arm(x,'確定刪除？',()=>{L.ev=L.ev.filter(a=>a.id!==x.dataset.dl);if(editing===x.dataset.dl){editing=null;fill(null)}save();render()})};
+$('l-svg').onclick=e=>{const g=e.target.closest('.ev');if(g)edit(g.dataset.id)};
+$('l-svg').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){const g=e.target.closest('.ev');if(g){e.preventDefault();edit(g.dataset.id)}}};
+const bx=$('l-box'),bm=$('l-msg');
+$('l-bk').onclick=()=>{bx.hidden=false;bx.value='SATIRL1:'+btoa(unescape(encodeURIComponent(JSON.stringify(L))));bx.focus();bx.select();try{navigator.clipboard.writeText(bx.value).catch(()=>{})}catch(e){}bm.textContent='備份碼已產生，請全選複製，貼去自己嘅記事簿或者傳畀自己。'};
+$('l-rs').onclick=e=>{const v=bx.value.trim();if(bx.hidden||!v.startsWith('SATIRL1:')){bx.hidden=false;bx.value='';bx.focus();bm.textContent='請將備份碼貼喺上面，再撳一次「用備份碼還原」。';return}
+arm(e.target,'會取代而家內容，再撳一次確定',()=>{try{const d=JSON.parse(decodeURIComponent(escape(atob(v.slice(8)))));if(!Array.isArray(d.ev))throw 0;
+L={birth:+d.birth>=1900&&+d.birth<=NOW?+d.birth:'',ev:d.ev.map(e=>({id:String(e.id||'').replace(/[^a-z0-9]/gi,'').slice(0,20),y:+e.y,m:e.m==='a'?'a':'y',t:String(e.t||'').slice(0,12),c:+e.c>=0&&+e.c<7?+e.c:0,o:String(e.o||'').slice(0,8),f:FEEL[e.f]?e.f:'',fam:String(e.fam||'').slice(0,800),n:String(e.n||'').slice(0,800)})).filter(e=>e.id&&e.y>=1900&&e.y<=NOW)};save();render();bm.textContent='已還原。'}catch(x){bm.textContent='呢個備份碼讀唔到，請確認有冇複製漏咗。'}})};
+window.SLF={get:()=>L,CAT,FEEL};render();
+})();</script>
+<script>(function(){
+const $=id=>document.getElementById(id),V=['home','family','wheel','loss','life','finish'];
 const LS=k=>{try{return localStorage.getItem(k)}catch(e){return null}},SS=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
 function route(o){let h=o||location.hash.slice(1);if(!V.includes(h))h=V.includes(LS('satir-view'))?LS('satir-view'):'home';
 V.forEach(v=>{$('v-'+v).hidden=v!==h});document.querySelectorAll('.top a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+h));SS('satir-view',h);
-if(h==='home'){$('c-wheel').textContent='已加入 '+SW.get().length+' 個人';$('c-loss').textContent='已標出 '+SL.get().ev.length+' 個喪失';$('c-family').textContent='已加入 '+(SF.get().people.length-1)+' 位家人，'+SF.get().rel.length+' 段關係'}
-if(h==='finish')$('fsum').textContent='目前包括：原生家庭圖（'+(SF.get().people.length-1)+' 位家人）、影響輪（'+SW.get().length+' 個人）、喪失年表（'+SL.get().ev.length+' 個喪失）同你寫過嘅回望、回饋。';
+if(h==='home'){$('c-wheel').textContent='已加入 '+SW.get().length+' 個人';$('c-loss').textContent='已標出 '+SL.get().ev.length+' 個喪失';$('c-life').textContent='已記低 '+SLF.get().ev.length+' 件事';$('c-family').textContent='已加入 '+(SF.get().people.length-1)+' 位家人，'+SF.get().rel.length+' 段關係'}
+if(h==='finish')$('fsum').textContent='目前包括：原生家庭圖（'+(SF.get().people.length-1)+' 位家人）、影響輪（'+SW.get().length+' 個人）、喪失年表（'+SL.get().ev.length+' 個喪失）、生活列表（'+SLF.get().ev.length+' 件事）同你寫過嘅回望、回饋。';
 scrollTo(0,0)}
 addEventListener('hashchange',()=>route());
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a){e.preventDefault();const h=a.getAttribute('href').slice(1);try{location.hash=h}catch(x){}route(h)}});
 route();
-const DK='satir-draft-v1',DF=['f-name','f-taught','f-s','f-carry','f-keep','f-drop','birth','f-y','f-t','f-o','f-n'];
+const DK='satir-draft-v1',DF=['l-birth','l-y','l-t','l-o','l-fam','l-n','f-name','f-taught','f-s','f-carry','f-keep','f-drop','birth','f-y','f-t','f-o','f-n'];
 let dr={};try{dr=JSON.parse(LS(DK)||'{}')||{}}catch(e){}
 DF.forEach(id=>{const el=$(id);if(el&&dr[id])el.value=dr[id]});
 const sd=()=>{DF.forEach(id=>{const el=$(id);if(el)dr[id]=el.value});SS(DK,JSON.stringify(dr))};
@@ -492,7 +567,7 @@ document.addEventListener('input',e=>{if(DF.includes(e.target.id))sd()});
 document.addEventListener('click',e=>{if(e.target.closest('.btn'))setTimeout(sd,0)});
 const msg=t=>{$('xmsg').textContent=t};
 const arm=(b,t,fn)=>{if(b.dataset.a){fn();return}const o=b.textContent;b.dataset.a=1;b.textContent=t;setTimeout(()=>{delete b.dataset.a;b.textContent=o},3500)};
-$('x-clr').onclick=e=>arm(e.target,'確定清除？',()=>{['satir-wheel-v1','satir-loss-v1','satir-family-v1',DK,'satir-view'].forEach(k=>{try{localStorage.removeItem(k)}catch(x){}});location.reload()});
+$('x-clr').onclick=e=>arm(e.target,'確定清除？',()=>{['satir-wheel-v1','satir-loss-v1','satir-family-v1','satir-life-v1',DK,'satir-view'].forEach(k=>{try{localStorage.removeItem(k)}catch(x){}});location.reload()});
 const PR=['fill','stroke','stroke-width','stroke-dasharray','stroke-linecap','font-size','font-weight','font-family','text-anchor','dominant-baseline','opacity'];
 function su(svg){const cl=svg.cloneNode(true),o=[svg,...svg.querySelectorAll('*')],n=[cl,...cl.querySelectorAll('*')];
 o.forEach((e,i)=>{const s=getComputedStyle(e);n[i].setAttribute('style',PR.map(p=>p+':'+s.getPropertyValue(p)).join(';'))});
@@ -510,10 +585,12 @@ const P=SW.get(),S=SL.get(),CAT=SL.CAT,F=SW.FEEL,ev=S.ev.slice().sort((a,b)=>a.y
 np();text('我嘅探索紀錄',44,FG,0,1);text(new Date().toLocaleDateString('zh-HK'),20,F2);y+=16;
 if(P.length){text('影響輪',32,FG,0,1);await pic(document.querySelector('#v-wheel svg'),760);
 P.forEach(p=>{text('● '+p.name+'　'+F[p.feel]+'・影響程度 '+p.s+'/5',26,FG,0,1);[['教咗我',p.taught],['我帶住',p.carry],['想保留',p.keep],['想放低',p.drop]].forEach(a=>a[1]&&text(a[0]+'：'+a[1],22,F2,24));y+=8})}
-const FF=SF.get();if(FF.people.length>3||FF.rel.length||FF.rules||FF.people.some(p=>p.adj||p.infl||p.cope||p.note)){y+=16;text('原生家庭圖',32,FG,0,1);await pic(document.querySelector('#v-family svg'),W);
-FF.people.forEach(p=>{const l=[p.adj&&'形容：'+p.adj,p.cope&&'壓力大嗰陣：'+SF.COPE[p.cope],p.infl&&'對我嘅影響：'+p.infl,p.note&&'補充：'+p.note].filter(Boolean);if(!l.length)return;text('● '+(p.n||'？'),24,FG,0,1);l.forEach(t=>text(t,21,F2,24))});
+const FF=SF.get();if(FF.people.length>3||FF.rel.length||FF.rules||FF.people.some(p=>p.adj||p.infl||p.cope)){y+=16;text('原生家庭圖',32,FG,0,1);await pic(document.querySelector('#v-family svg'),W);
+FF.people.forEach(p=>{const l=[p.adj&&'形容：'+p.adj,p.cope&&'壓力大嗰陣：'+SF.COPE[p.cope],p.infl&&'對我嘅影響：'+p.infl].filter(Boolean);if(!l.length)return;text('● '+(p.n||'？'),24,FG,0,1);l.forEach(t=>text(t,21,F2,24))});
 FF.rel.forEach(r=>{const a=FF.people.find(p=>p.id===r.a),b=FF.people.find(p=>p.id===r.b);if(a&&b)text((a.n||'？')+' — '+(b.n||'？')+'：'+SF.T[r.t].n+(r.note?'（'+r.note+'）':''),22,FG,0)});
 if(FF.rules)text('家庭規條：'+FF.rules,22,FG,0)}
+const LL=SLF.get();if(LL.ev.length){y+=16;text('生活列表',32,FG,0,1);await pic(document.querySelector('#v-life .paper svg'),W);
+LL.ev.slice().sort((a,b)=>a.y-b.y).forEach(e=>{text(e.y+' 年'+(LL.birth?'（'+(e.y-LL.birth)+' 歲）':'')+'　'+e.t+'　['+SLF.CAT[e.c]+(e.o?'：'+e.o:'')+']'+(e.f?'　'+SLF.FEEL[e.f]:''),24,FG,0,1);e.fam&&text('當時身邊：'+e.fam,21,F2,24);e.n&&text(e.n,21,F2,24)})}
 if(S.birth){y+=16;text('喪失年表',32,FG,0,1);await pic(document.querySelector('#v-loss .paper svg'),W);
 ev.forEach(e=>{text(e.y+' 年（'+(e.y-S.birth)+' 歲）　'+e.t+'　['+CAT[e.c][0]+(e.o?'：'+e.o:'')+']',24,FG,0,1);e.n&&text(e.n,21,F2,24)})}
 const rf=(A,title,fbk)=>{const r=[];SL.ST.forEach(s=>{if(s.c&&(A[s.c]||[]).length)r.push([s.t+'：'+A[s.c].join('、')]);s.x.forEach(q=>A[q[0]]&&A[q[0]].trim()&&r.push([q[1],A[q[0]]]))});SL.CL.forEach(q=>A[q[0]]&&A[q[0]].trim()&&r.push([q[1],A[q[0]]]));
